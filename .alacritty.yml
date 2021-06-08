@@ -1,0 +1,136 @@
+M: xterm-256color
+# setup links: https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+
+window:
+  dynamic_padding: false
+  decorations: none
+  # startup_mode: size
+  dimensions:
+   columns: 170
+   lines: 65
+  position:
+   x: 0
+   y: 0
+  padding:
+   x: 10
+   y: 30
+
+
+font:
+  normal:
+    family: Hack Nerd Font
+    style: Regular
+  bold:
+    family: Fira Code
+    style: Bold
+  italic:
+    family: Fira Code
+    style: Italic
+  bold_italic:
+    family: Fira Code
+    style: Bold Italic
+  size: 13.0
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+background_opacity: 0.7
+draw_bold_text_with_bright_colors: false
+#
+# cursor:
+#   # style:
+#   #   shape: Block
+#   #   blinking: On
+#   # vi_mode_style: Underline
+#   # blink_interval: 750
+#   # unfocused_hollow: true
+#
+# # colors:
+# #   primary:
+# #     # hard contrast background - '#1d2021'
+# #     background:        &gruvbox_dark_bg '#282828'
+# #     # soft contrast background - '#32302f'
+# #     foreground:        '#fbf1c7'
+# #     bright_foreground: '#f9f5d7'
+# #     dim_foreground:    '#f2e5bc'
+# #   # cursor:
+# #   #   text:   CellBackground
+# #   #   cursor: CellForeground
+# #   # vi_mode_cursor:
+# #   #   text:   CellBackground
+# #   #   cursor: CellForeground
+# #   search:
+# #     matches:
+# #       foreground: '#000000'
+# #       background: '#ffffff'
+# #     focused_match:
+# #      foreground: CellBackground
+# #      background: CellForeground
+# #     bar:
+# #       background: ''
+# #       foreground: ''
+# #   line_indicator:
+# #     foreground: None
+# #     background: None     
+# #   selection:
+# #     text:       CellBackground
+# #     background: CellForeground
+# #   bright:
+# #     black:   '#928374'
+# #     red:     '#fb4934'
+# #     green:   '#b8bb26'
+# #     yellow:  '#fabd2f'
+# #     blue:    '#83a598'
+# #     magenta: '#d3869b'
+# #     cyan:    '#8ec07c'
+# #     white:   '#ebdbb2'
+# #   normal:
+# #     black:   *gruvbox_dark_bg
+# #     red:     '#cc241d'
+# #     green:   '#98971a'
+# #     yellow:  '#d79921'
+# #     blue:    '#458588'
+# #     magenta: '#b16286'
+# #     cyan:    '#689d6a'
+# #     white:   '#a89984'
+# #   dim:
+# #     black:   '#32302f'
+# #     red:     '#9d0006'
+# #     green:   '#79740e'
+# #     yellow:  '#b57614'
+# #     blue:    '#076678'
+# #     magenta: '#8f3f71'
+# #     cyan:    '#427b58'
+# #     white:   '#928374'
+# #   # indexed_colors: []
+#
+indexed_colors: []
+
+bell:
+  animation: EaseOutExpo
+  color: '0xffffff'
+  duration: 0
+
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+  hide_when_typing: true
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+  save_to_clipboard: false
+
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+live_config_reload: true
+
+debug:
+  render_timer: false
+  persistent_logging: false
+  log_level: OFF
+  print_events: false
+  ref_test: false
