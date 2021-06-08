@@ -1,5 +1,11 @@
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+# node
+brew install node
+
+# .net for C#
+brew install --cask dotnet-sdk
 # Change shell from zsh to bash
 # check which scripting languages are supported in the system.
 cat /etc/shells 
@@ -24,15 +30,14 @@ brew install xcodegen
 brew install sourcekitten # need to install xcode
 brew install swiftlint gradle
 # Font firacode
-brew tap caskroom/fonts
-brew cask install font-fira-code
+brew tap homebrew/cask-fonts
+brew install font-fira-code
 # hack nerd font
 brew install --cask font-hack-nerd-font
 
 
 # Tmux
 brew install tmux tmuxinator
-brew tap homebrew/cask-fonts
 
 # Browser
 brew install --cask firefox
@@ -55,6 +60,7 @@ brew install --HEAD neovim
 # brew uninstall neovim
 
 # ranger for vim. python client for nvim
+sudo pip3 install --upgrade pip
 pip3 install ranger-fm pynvim
 
 # java
