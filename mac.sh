@@ -1,11 +1,14 @@
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+# macvim
+brew install macvim
+
 # node
 brew install node
 
 # .net for C#
-brew install --cask dotnet-sdk
+# brew install --cask dotnet-sdk
 # Change shell from zsh to bash
 # check which scripting languages are supported in the system.
 cat /etc/shells 
@@ -17,7 +20,9 @@ brew install tree
 brew install ranger
 
 # Search
-brew install fzf ripgrep
+brew install ripgrep
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 # nodejs
 sudo npm install -g tldr

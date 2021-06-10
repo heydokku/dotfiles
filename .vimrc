@@ -1,5 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
+  " theme
+  Plug 'morhetz/gruvbox'
   " fuzzy finder
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
@@ -13,17 +15,17 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'janko/vim-test'
   Plug 'OmniSharp/omnisharp-vim'
+  Plug 'idbrii/vim-unityengine'
   " Plug 'puremourning/vimspector'
   Plug 'vimwiki/vimwiki'
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  Plug 'nvim-telescope/telescope.nvim'
-  Plug 'nvim-lua/popup.nvim'
-  Plug 'nvim-lua/plenary.nvim'
   Plug 'heavenshell/vim-jsdoc', { 
   \ 'for': ['javascript', 'javascript.jsx','typescript'], 
   \ 'do': 'make install'
   \}
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'mhinz/neovim-remote'
+  Plug 'dense-analysis/ale'
+  Plug 'neomake/neomake' " Asynchronous linting and make framework for Neovim/Vim 
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-repeat'
 
@@ -31,7 +33,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'folke/tokyonight.nvim'
   Plug 'Mofiqul/codedark.nvim'
-  Plug 'hoob3rt/lualine.nvim'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'ryanoasis/vim-devicons'
   Plug 'preservim/nerdtree'
@@ -53,7 +54,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'lervag/vimtex'
 
   " Snippets
-  Plug 'SirVer/ultisnips'
+  " Plug 'SirVer/ultisnips'
   Plug 'theniceboy/vim-snippets'
 
   " Undo Tree
@@ -115,6 +116,8 @@ Plug 'lambdalisue/suda.vim' " do stuff like :sudowrite
 
 call plug#end()
  
+colorscheme gruvbox
+set bg=dark
 " default options
 noremap ; :
 
@@ -157,7 +160,6 @@ set number " show absolute line numbers
 set ignorecase " search case insensitive
 set smartcase " search via smartcase
 set incsearch " search incremental
-set diffopt+=vertical " starts diff mode in vertical split
 set hidden " allow hidden buffers
 set nobackup " don't create backup files
 set nowritebackup " don't create backup files
@@ -168,9 +170,6 @@ set updatetime=520 " time until update
 set undofile " persists undo tree
 filetype plugin indent on " enable detection, plugins and indents
 let mapleader = " " " space as leader key
-if (has("termguicolors"))
-  set termguicolors " better colors, but makes it very slow!
-endif
 let g:netrw_banner=0 " disable banner in netrw
 let g:netrw_liststyle=3 " tree view in netrw
 let g:markdown_fenced_languages = ['javascript', 'js=javascript', 'json=javascript'] " syntax highlighting in markdown
@@ -214,9 +213,8 @@ let g:coc_global_extensions=[
   \ 'coc-java' ,
   \ 'coc-go' ,
   \ 'coc-omnisharp' ,
-  \ 'coc-markdownlint' ,
-  \ 'coc-solargraph' 
-]
+  \ 'coc-markdownlint',
+  \ 'coc-solargraph',]
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -351,19 +349,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-" lewis6991/gitsigns.nvim
-lua << EOF
- require('gitsigns').setup({})
-EOF
-
-" 'hoob3rt/lualine.nvim'
-lua << EOF
-  require('lualine').setup({
-  options = {
-    theme = "codedark-nvim"
-   }
-  })
-EOF
 
 " szw/vim-maximizer
 nnoremap <silent> <C-w>m :MaximizerToggle!<CR>
@@ -478,32 +463,18 @@ let wiki = {}
 let wiki.nested_syntaxes = { 'js': 'javascript' }
 let g:vimwiki_list = [wiki] 
 
-" nvim/treesitter
-colorscheme codedark
-
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-  },
-  indent = {
-    enable = true
-  }
-}
-EOF
-
-nnoremap <leader>dh :lua require'dap'.toggle_breakpoint()<CR>
-nnoremap <S-k> :lua require'dap'.step_out()<CR>
-nnoremap <S-l> :lua require'dap'.step_into()<CR>
-nnoremap <S-j> :lua require'dap'.step_over()<CR>
-nnoremap <leader>dn :lua require'dap'.continue()<CR>
-nnoremap <leader>dk :lua require'dap'.up()<CR>
-nnoremap <leader>dj :lua require'dap'.down()<CR>
-nnoremap <leader>d_ :lua require'dap'.run_last()<CR>
-nnoremap <leader>dr :lua require'dap'.repl.open({}, 'vsplit')<CR><C-w>l
-nnoremap <leader>di :lua require'dap.ui.variables'.hover(function () return vim.fn.expand("<cexpr>") end)<CR>
-vnoremap <leader>di :lua require'dap.ui.variables'.visual_hover()<CR>
-nnoremap <leader>d? :lua require'dap.ui.variables'.scopes()<CR>
-nnoremap <leader>de :lua require'dap'.set_exception_breakpoints({"all"})<CR>
-nnoremap <leader>da :lua require'debugHelper'.attach()<CR>
+" nnoremap <leader>dh :lua require'dap'.toggle_breakpoint()<CR>
+" nnoremap <S-k> :lua require'dap'.step_out()<CR>
+" nnoremap <S-l> :lua require'dap'.step_into()<CR>
+" nnoremap <S-j> :lua require'dap'.step_over()<CR>
+" nnoremap <leader>dn :lua require'dap'.continue()<CR>
+" nnoremap <leader>dk :lua require'dap'.up()<CR>
+" nnoremap <leader>dj :lua require'dap'.down()<CR>
+" nnoremap <leader>d_ :lua require'dap'.run_last()<CR>
+" nnoremap <leader>dr :lua require'dap'.repl.open({}, 'vsplit')<CR><C-w>l
+" nnoremap <leader>di :lua require'dap.ui.variables'.hover(function () return vim.fn.expand("<cexpr>") end)<CR>
+" vnoremap <leader>di :lua require'dap.ui.variables'.visual_hover()<CR>
+" nnoremap <leader>d? :lua require'dap.ui.variables'.scopes()<CR>
+" nnoremap <leader>de :lua require'dap'.set_exception_breakpoints({"all"})<CR>
+" nnoremap <leader>da :lua require'debugHelper'.attach()<CR>
 
