@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+
   " Editor enhancements
   Plug 'matze/vim-move' " 5<A-k> will move the selection up by 5 lines
   Plug 'tpope/vim-unimpaired' " insert space ]<Space>, ]e: exchange line
@@ -6,7 +7,7 @@ call plug#begin('~/.vim/plugged')
 
   " colorscheme
   Plug 'morhetz/gruvbox'
-  Plug 'sonph/onehalf', {'rtp': 'vim/'}
+
   " fuzzy finder
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
@@ -65,12 +66,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'lervag/vimtex'
 
   " Snippets
-  " Plug 'SirVer/ultisnips'
+  Plug 'SirVer/ultisnips'
   Plug 'theniceboy/vim-snippets'
   Plug 'mbbill/undotree'
 
   " ruby
-  Plug 'tpope/vim-endwise'
+  " Plug 'tpope/vim-endwise' " conflict with coc.nvim
   " HTML, CSS, JavaScript, Typescript, PHP, JSON, etc.
   Plug 'elzr/vim-json'
   Plug 'neoclide/jsonc.vim'
@@ -256,33 +257,30 @@ nmap <silent><leader>ca <Plug>(coc-codelens-action)
 vmap <silent><leader>a  <Plug>(coc-codeaction-selected)
 nmap <silent><leader>a  <Plug>(coc-codeaction)
 
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" let g:coc_snippet_next = '<tab>'"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+inoremap <silent><expr> <TAB>
+	\ pumvisible() ? "\<C-n>" :
+	\ <SID>check_back_space() ? "\<TAB>" :
+	\ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+function! s:check_back_space() abort
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <c-o> coc#refresh()
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
