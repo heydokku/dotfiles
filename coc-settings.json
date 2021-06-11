@@ -1,0 +1,13 @@
+{
+  "codeLens.enable": true,
+  "suggest.echodocSupport": true,
+  "diagnostic.virtualText": true,
+  "suggest.languageSourcePriority": 99,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "dart",
+    "javascript",
+    "markdown"
+  ],
+  "flutter.openDevLogSplitCommand": "botright 10split",
+  "flutter.lsp.initialization.onlyAnalyzeProjectsWithOpenFiles": false
+}

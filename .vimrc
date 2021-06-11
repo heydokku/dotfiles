@@ -1,54 +1,65 @@
 call plug#begin('~/.vim/plugged')
+  " Editor enhancements
+  Plug 'matze/vim-move' " 5<A-k> will move the selection up by 5 lines
+  Plug 'tpope/vim-unimpaired' " insert space ]<Space>, ]e: exchange line
+  Plug 'szw/vim-maximizer'
 
-  " theme
+  " colorscheme
   Plug 'morhetz/gruvbox'
+  Plug 'sonph/onehalf', {'rtp': 'vim/'}
   " fuzzy finder
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   " tagbar
   Plug 'preservim/tagbar'
 
-  Plug 'szw/vim-maximizer'
-  Plug 'kassio/neoterm'
+  " TODO:
+  Plug 'kassio/neoterm' "Wraps REPLs to receive current file, line or selection
   Plug 'tpope/vim-commentary'
   Plug 'sbdchd/neoformat'
-  Plug 'tpope/vim-fugitive'
-  Plug 'janko/vim-test'
-  Plug 'OmniSharp/omnisharp-vim'
-  Plug 'idbrii/vim-unityengine'
-  " Plug 'puremourning/vimspector'
+
   Plug 'vimwiki/vimwiki'
-  Plug 'heavenshell/vim-jsdoc', { 
-  \ 'for': ['javascript', 'javascript.jsx','typescript'], 
+  Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript'],
   \ 'do': 'make install'
   \}
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'mhinz/neovim-remote'
   Plug 'dense-analysis/ale'
-  Plug 'neomake/neomake' " Asynchronous linting and make framework for Neovim/Vim 
+  Plug 'neomake/neomake' " Asynchronous linting and make framework for Neovim/Vim
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-repeat'
 
   Plug 'alaviss/nim.nvim'
-  Plug 'lewis6991/gitsigns.nvim'
-  Plug 'folke/tokyonight.nvim'
-  Plug 'Mofiqul/codedark.nvim'
-  Plug 'kyazdani42/nvim-web-devicons'
-  Plug 'ryanoasis/vim-devicons'
   Plug 'preservim/nerdtree'
+  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'ryanoasis/vim-devicons'
   Plug 'jiangmiao/auto-pairs'
 
-  " tmux plugins
+  " Git-related
+  Plug 'lewis6991/gitsigns.nvim'
+  Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
+
+  " Tmux
   Plug 'edkolev/tmuxline.vim'
   Plug 'christoomey/vim-tmux-navigator'
+
+  " Testing
+  Plug 'janko/vim-test'
+  " Debug
+" Plug 'puremourning/vimspector'
+
+  " Csharp
+  Plug 'OmniSharp/omnisharp-vim'
+  Plug 'idbrii/vim-unityengine'
 
   " scss & css
   Plug 'cakebaker/scss-syntax.vim'
   Plug 'hail2u/vim-css3-syntax'
   Plug 'ap/vim-css-color'
-  
-  " git-related
-  Plug 'airblade/vim-gitgutter'
+
 
   " latex
   Plug 'lervag/vimtex'
@@ -56,10 +67,10 @@ call plug#begin('~/.vim/plugged')
   " Snippets
   " Plug 'SirVer/ultisnips'
   Plug 'theniceboy/vim-snippets'
-
-  " Undo Tree
   Plug 'mbbill/undotree'
 
+  " ruby
+  Plug 'tpope/vim-endwise'
   " HTML, CSS, JavaScript, Typescript, PHP, JSON, etc.
   Plug 'elzr/vim-json'
   Plug 'neoclide/jsonc.vim'
@@ -84,9 +95,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
   Plug 'pantharshit00/vim-prisma'
 
+  Plug 'natebosch/vim-lsc'
+
   " Flutter
   Plug 'dart-lang/dart-vim-plugin'
-  Plug 'f-person/pubspec-assist-nvim', { 'for' : ['pubspec.yaml'] }
+  Plug 'natebosch/vim-lsc-dart'
+  Plug 'natebosch/dartlang-snippets'
 
   " Swift
   Plug 'keith/swift.vim'
@@ -100,24 +114,35 @@ call plug#begin('~/.vim/plugged')
   Plug 'theniceboy/pair-maker.vim'
   Plug 'theniceboy/vim-move'
 
-  Plug 'Yggdroot/indentLine'
-  
+  " Plug 'Yggdroot/indentLine'
+
   " Bookmarks
   Plug 'MattesGroeger/vim-bookmarks'
-  
+
   " Other visual enhancement
   Plug 'luochen1990/rainbow'
   Plug 'mg979/vim-xtabline'
-  Plug 'ryanoasis/vim-devicons'
   Plug 'wincent/terminus'
 
 " Other useful utilities
 Plug 'lambdalisue/suda.vim' " do stuff like :sudowrite
 
 call plug#end()
- 
+
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+augroup THE_PRIMEAGEN
+    autocmd!
+    autocmd BufWritePre * :call TrimWhitespace()
+augroup END
+
 colorscheme gruvbox
-set bg=dark
+set background=dark
+" colorscheme onehalfdark
 " default options
 noremap ; :
 
@@ -144,6 +169,7 @@ set foldmethod=syntax
 set foldlevelstart=99
 set foldnestmax=10
 set foldlevel=1
+set relativenumber
 
 set nobackup
 set nowb
@@ -179,7 +205,7 @@ nnoremap <leader>v :e $MYVIMRC<CR>
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-let g:coc_global_extensions=[ 
+let g:coc_global_extensions=[
 	\ 'coc-css',
 	\ 'coc-diagnostic',
 	\ 'coc-eslint',
@@ -199,6 +225,7 @@ let g:coc_global_extensions=[
 	\ 'coc-sourcekit',
 	\ 'coc-stylelint',
 	\ 'coc-syntax',
+	\ 'coc-sh',
   \ 'coc-omnisharp',
 	\ 'coc-tailwindcss',
 	\ 'coc-tasks',
@@ -214,7 +241,20 @@ let g:coc_global_extensions=[
   \ 'coc-go' ,
   \ 'coc-omnisharp' ,
   \ 'coc-markdownlint',
-  \ 'coc-solargraph',]
+  \ 'coc-solargraph',
+  \]
+" Coc - Flutter
+nnoremap <leader>rr :CocCommand flutter.run<cr>
+nnoremap <leader>re :CocCommand flutter.emulators<cr>
+nnoremap <leader>rh :CocCommand flutter.dev.hotreload<cr>
+nnoremap <leader>rs :CocCommand flutter.dev.hotRestart<cr>
+" TODO:
+" nnoremap <leader>fs :CocCommand flutter.dev.screenshot<cr>
+
+" Coc-flutter Actions (e.g., Wrap Widget)
+nmap <silent><leader>ca <Plug>(coc-codelens-action)
+vmap <silent><leader>a  <Plug>(coc-codeaction-selected)
+nmap <silent><leader>a  <Plug>(coc-codeaction)
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -266,12 +306,8 @@ endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
-
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+" Remap for rename current word
+nmap <F2> <Plug>(coc-rename)
 
 augroup mygroup
   autocmd!
@@ -333,22 +369,11 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> ;a  :<C-u>CocList diagnostics<cr>
-" Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
-" Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> ;<space>l  :<C-u>CocList diagnostics<cr>
 " Find symbol of current document.
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
+nnoremap <silent><nowait> <space>p  :<C-u>CocList -I symbols<cr>
 
 " szw/vim-maximizer
 nnoremap <silent> <C-w>m :MaximizerToggle!<CR>
@@ -369,10 +394,12 @@ if has('nvim')
 endif
 
 " preservim/nerdtree
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <leader>n :NERDTreeFind<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
+
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
@@ -380,17 +407,6 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 
 " sbdchd/neoformat
 nnoremap <leader>F :Neoformat prettier<CR>
-
-" nvim-telescope/telescope.nvim
-nnoremap <leader><space> :Telescope git_files<CR>
-" nnoremap <leader>ff :Telescope live_grep<CR>
-nnoremap <leader>fn :Telescope find_files<CR>
-nnoremap <leader>fg :Telescope git_branches<CR>
-nnoremap <leader>fb :Telescope buffers<CR>
-nnoremap <leader>fs :Telescope lsp_document_symbols<CR>
-nnoremap <leader>ff :Telescope live_grep<CR>
-nnoremap <leader>FF :Telescope grep_string<CR>
-" nnoremap <leader>ff : lua require'telescope.builtin'.grep_string{ only_sort_text = true, search = vim.fn.input("Grep For >") }<CR>
 
 " tpope/vim-fugitive
 nnoremap <leader>gg :G<cr>
@@ -445,7 +461,7 @@ let test#neovim#term_position = "vertical"
 " function! JestStrategy(cmd)
  "  let testName = matchlist(a:cmd, '\v -t ''(.*)''')[1]
  "  call vimspector#LaunchWithSettings( #{ configuration: 'jest', TestName: testName } )
-" endfunction      
+" endfunction
 " let g:test#custom_strategies = {'jest': function('JestStrategy')}
 
 " CDS
@@ -461,7 +477,7 @@ nnoremap <Leader>wn <Plug>VimwikiNextLink
 let g:vimwiki_global_ext = 0
 let wiki = {}
 let wiki.nested_syntaxes = { 'js': 'javascript' }
-let g:vimwiki_list = [wiki] 
+let g:vimwiki_list = [wiki]
 
 " nnoremap <leader>dh :lua require'dap'.toggle_breakpoint()<CR>
 " nnoremap <S-k> :lua require'dap'.step_out()<CR>
@@ -478,3 +494,35 @@ let g:vimwiki_list = [wiki]
 " nnoremap <leader>de :lua require'dap'.set_exception_breakpoints({"all"})<CR>
 " nnoremap <leader>da :lua require'debugHelper'.attach()<CR>
 
+" dart-vim
+let dart_format_on_save = 1
+let dart_style_guide = 2
+
+"vim-lsc
+let g:lsc_auto_map = {'defaults': v:true, 'FindReferences': '', 'NextReference': '', 'PreviousReference': ''}
+let g:lsc_reference_highlights = v:false
+let g:lsc_enable_autocomplete = v:false " vim-lsc autocomplete (completeopt) conflicts with coc-vim autocomplete (completeopt)
+
+"fzf.vim
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'border': 'sharp' } }
+let g:fzf_tags_command = 'ctags -R'
+
+let $FZF_DEFAULT_OPTS = '--inline-info'
+let $FZF_DEFAULT_COMMAND = "rg --files --hidden --glob '!.git/**' --glob '!build/**' --glob '!.dart_tool/**' --glob '!.idea'"
+nnoremap <leader>f :GFiles<cr>
+nnoremap <leader>g :Rg<cr>
+
+"vim-devicon
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+
+"vim-move
+let g:move_map_keys = 0
+nmap <C-k> <Plug>MoveLineUp
+nmap <C-j> <Plug>MoveLineDown
+vmap <C-k> <Plug>MoveBlockUp
+vmap <C-j> <Plug>MoveBlockDown
