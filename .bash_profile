@@ -1,10 +1,11 @@
+export TERM=xterm-256color
 export PATH="$PATH:/Users/noname/.npm/bin:$PATH"
 export PATH="$PATH:/Users/noname/flutter/bin:$PATH" # Setting PATH for Python 3.9 The original version is saved in .bash_profile.pysave
 export PATH="$PATH:/Users/vanducnguyen/Downloads/flutter/bin:$PATH" # Setting PATH for Python 3.9 The original version is saved in .bash_profile.pysave
 export PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
 
 # editor
-export VISUAL=vim 
+export VISUAL=vim
 export EDITOR="$VISUAL"
 set -o vi
 

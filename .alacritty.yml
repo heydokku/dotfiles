@@ -7,7 +7,7 @@ window:
   # startup_mode: size
   dimensions:
    columns: 170
-   lines: 65
+   lines: 58
   position:
    x: 0
    y: 0
@@ -73,7 +73,7 @@ draw_bold_text_with_bright_colors: false
 # #       foreground: ''
 # #   line_indicator:
 # #     foreground: None
-# #     background: None     
+# #     background: None
 # #   selection:
 # #     text:       CellBackground
 # #     background: CellForeground
