@@ -6,8 +6,8 @@ window:
   decorations: none
   # startup_mode: size
   dimensions:
-   columns: 170
-   lines: 58
+   columns: 150
+   lines: 65
   position:
    x: 0
    y: 0
@@ -21,13 +21,13 @@ font:
     family: Hack Nerd Font
     style: Regular
   bold:
-    family: Fira Code
+    family: Hack Nerd Font
     style: Bold
   italic:
-    family: Fira Code
+    family: Hack Nerd Font
     style: Italic
   bold_italic:
-    family: Fira Code
+    family: Hack Nerd Font
     style: Bold Italic
   size: 13.0
   offset:

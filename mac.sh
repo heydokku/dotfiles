@@ -1,9 +1,18 @@
+#gmac:
+#gdon't update mac bigsur, when update it's will not compatible with the USB device, disable the network when use USB
+# 1. Basics
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install macvim git node
-# create global ~/.git_ignore
+# TODO:create script that open alacritty, firefox, note at the startup
+# brew install macvim git
+brew install node httpie
+npm -g install instant-markdown-d eslint js-beautify stylelint typescript-formatter remark-cli fixjson
+# copy .git_ignore
+git clone https://github.com/heydokku/dotfiles
 git config --global core.excludesfile ~/.gitignore_global
-# cp ~/dotfiles/.gitignore ~
+cp ~/dotfiles/.gitignore ~
+cp ~/dotfiles/.tmux.conf ~
+cp ~/dotfiles/.bash_profile ~
 
 # .net for C#
 # brew install --cask dotnet-sdk
@@ -20,9 +29,24 @@ brew install ripgrep
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
-# android development
-brew install bundletool
-
+# Download android sdk from  https://developer.android.com/studio/#downloads. Don't use brew to install, will get error
+# brew install java # will install latest java (11)
+# installed by HomeBrew, automatically added to usr/local/bin
+brew install bundletool java8 android-sdk android-ndk  android-platform-tools
+brew tap adoptopenjdk/openjdk
+brew install adoptopenjdk8
+#  android development
+touch ~/.android/repositories.cfg
+yes | sdkmanager --licenses
+# "android" command is depreceated, use sdkmanager
+sdkmanager --no_https --install 'system-images;android-30;google_apis;x86' 'emulator'
+sdkmanager --no_https --install 'extras;intel;Hardware_Accelerated_Execution_Manager'
+sdkmanager --no_https --install 'platforms;android-30' 'build-tools;30.0.2'
+sdkmanager --list
+# brew cask install adoptopenjdk13
+# create new virtual devices
+#download the android emulator package, not with specific devices
+# Create a new virtual device
 # Xcode-related
 brew install robotsandpencils/made/xcodes # install specific version of xcodes, like rbenv
 brew install xcodegen
@@ -30,10 +54,14 @@ brew install sourcekitten # need to install xcode
 brew install swiftlint gradle
 # Font firacode
 brew tap homebrew/cask-fonts
-brew install font-fira-code
+# hack nerd font nhin thanh manh
+# fira code nhin no cu bi be ra
+brew install --cask font-hack-nerd-font
 
 # Tmux
 brew install tmux tmuxinator
+# tmuxinator's config files is located at ~/.config/tmuxinator/
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Tags
 brew install ctags exuberantk-ctags
@@ -43,26 +71,27 @@ brew install bat
 
 # TODO: https://github.com/Gcenx/WineskinServer to install mt5
 
-# neovim HEAD version
 # brew install --cask unity-hub
 # Change the firefox download folder to ~/Developer folder
-brew install --cask alacritty firefox
+brew install alacritty firefox vim
+# firefox
+# /Applications/Firefox.app/Contents/MacOS/firefox-bin --version
 
-# ranger for vim. python client for nvim
-sudo pip3 install --upgrade pip
-pip3 install ranger-fm pynvim
 
-# java
-# https://www.oracle.com/jp/java/technologies/javase-jre8-downloads.html
+# ranger for vim
+# vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  sudo pip3 install --upgrade pip
+  # echo 0000 | sudo -S <command>
+
+  pip3 install black
 
 # ruby
 # install rbenv
 brew install rbenv fastlane
 gem install bundler
 rbenv install 2.7.3
-
-# turn on install from anywhere
-sudo spctl --master-disable
 
 # mac clean-up
 curl -o cleanup https://raw.githubusercontent.com/fwartner/homebrew-mac-cleanup/master/mac-cleanup
@@ -72,4 +101,5 @@ sudo mv cleanup /usr/local/bin/cleanup
 cleanup -n
 
 # flutter
+brew install flutter
 # flutter upgrade && flutter pub upgrade

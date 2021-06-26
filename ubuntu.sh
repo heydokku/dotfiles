@@ -14,4 +14,13 @@ sudo apt install ubuntu-gnome-desktop
 sudo snap install flutter --classic
 
 # install gnome extension in browser for ubuntu, as named  ‘tweak’
+sudo apt install ranger
+pip install ueberzug
+mkdir ~/.config/ranger
+touch ~/.config/ranger/rc.conf
+# Add this configuration to rc.conf
+set preview_images_method ueberzug
+default_linemode devicons
+set show_hidden true
+
 

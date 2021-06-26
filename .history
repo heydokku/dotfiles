@@ -1,0 +1,877 @@
+rm ~/.bash_history 
+mv .history .bash_history
+history  -rw
+cl
+sudo shutdown -h now
+#1624424072
+pwd
+#1624424771
+ls -a
+#1624424789
+vi .history 
+#1624424771
+ls -a
+#1624424789
+vi .history 
+#1624424799
+
+#1624424806
+cl
+#1624424771
+ls -a
+#1624424789
+vi .history 
+#1624424799
+
+#1624424806
+cl
+#1624424859
+
+#1624424861
+
+#1624424870
+vi ~/.bash_profile 
+#1624425834
+cl
+#1624425846
+tmuxinator start nhatmoshimos
+#1624425855
+cd /Users/becalm/Developer/nhatngu
+#1624425855
+flutter emulators --launch test && cd ~/docs && v
+#1624425957
+tmuxinator edit nhatngumoshimos
+#1624425966
+vi ~/.alacritty.yml 
+#1624425854
+tmuxinator start nhatngumoshimos
+#1624425998
+pwd
+#1624426006
+tmux kill server
+#1624425855
+vi lib/main.dart
+#1624426016
+tmux kill-server
+#1624426032
+cd /Users/becalm/Developer/nhatngu
+#1624426031
+tmuxinator start nhatngumoshimos
+#1624426032
+vi lib/main.dart
+#1624426032
+flutter emulators --launch test && cd ~/docs && v
+#1624426222
+pưd
+#1624426229
+cd /Users/becalm/Developer/nhatngu
+#1624426229
+flutter emulators --launch test && cd ~/docs && v
+#1624426226
+tmuxinator start nhatngumoshimos
+#1624426310
+tmux kill-server
+#1624426229
+vi lib/main.dart
+#1624426248
+tmuxinator edit nhatngumoshimos
+#1624426314
+cd /Users/becalm/Developer/nhatngu
+#1624426314
+flutter emulators --launch test && cd ~/docs && v
+#1624427033
+tmuxinator edit nhatngumoshimos
+#1624427096
+pwd
+#1624427105
+cd ~/Developer/
+#1624427111
+node upload_firestore/
+#1624430126
+pwd
+#1624430135
+cd ~/docs/
+#1624426314
+cd ~/Developer/upload_firestore && vi data.json
+#1624430659
+sudo shutdown -h now
+#1624426312
+tmuxinator start nhatngumoshimos
+#1624430138
+v
+#1624426314
+vi lib/main.dart
+#1624436310
+tmuxinator start nhatngumoshimos
+#1624436321
+tmuxinator edit nhatngumoshimos
+#1624436346
+tmuxinator start nhatngumoshimos
+#1624436357
+tmuxinator edit nhatngumoshimos
+#1624436385
+cd /Users/becalm/Developer/nhatngu
+#1624436386
+cd ~/Developer
+#1624436386
+flutter emulators --launch test && cd ~/docs && v
+#1624436551
+tmuxinator -h
+#1624436554
+tmuxinator list
+#1624436566
+tmuxinator delete nhatngumosimos
+#1624436570
+cl
+#1624436566
+tmuxinator delete nhatngumosimos
+#1624436570
+cl
+#1624437305
+
+#1624437308
+v
+#1624441054
+dart
+#1624442468
+sudo shutdown -h now
+#1624436386
+cd ~/Developer/upload_firestore && vi data.json
+#1624436385
+vi lib/main.dart
+#1624441396
+tmuxinator start nhatngumoshimos
+#1624436384
+tmuxinator start nhatngumoshimos
+#1624442873
+cd /Users/becalm/Developer/nhatngu
+#1624442874
+cd ~/Developer
+#1624456532
+df -bm -H
+#1624456547
+cleanup -n
+#1624442873
+vi lib/main.dart
+#1624458341
+v
+#1624436384
+tmuxinator start nhatngumoshimos
+#1624442873
+cd /Users/becalm/Developer/nhatngu
+#1624442873
+vi lib/main.dart
+#1624458341
+v
+#1624458354
+
+#1624458357
+
+#1624458361
+pwd
+#1624458363
+v
+#1624458361
+pwd
+#1624458363
+v
+#1624458433
+
+#1624458441
+v
+#1624458502
+flutter pub add flutter_tts
+#1624458562
+cl
+#1624458564
+v
+#1624460352
+pwd
+#1624460355
+cd
+#1624460379
+git clone https://github.com/dlutton/flutter_tts
+#1624460642
+pwd
+#1624460651
+cd flutter_tts/example/
+#1624461956
+cl
+#1624461958
+pwd
+#1624461962
+cd nhatngu/
+#1624460652
+v
+#1624462737
+cd /Users/becalm/Developer/nhatngu
+#1624462737
+v
+#1624464228
+pwd
+#1624464236
+cd ~/flutter_tts/example/
+#1624464238
+pwd
+#1624442874
+flutter emulators --launch test && cd ~/docs && v
+#1624465090
+pwd
+#1624465094
+cd /Users/becalm/Developer/nhatngu
+#1624465095
+v
+#1624466316
+sudo shutdown -h now
+#1624461962
+v
+#1624442873
+cd ~/Developer/upload_firestore && vi data.json
+#1624464243
+v
+#1624494742
+pwd
+#1624494757
+cd /Users/becalm/Developer/nhatngu
+#1624494757
+cd ~/Developer
+#1624497963
+flutter emulators --launch test
+#1624505541
+pwd
+#1624505544
+cd nhatngu/
+#1624505550
+dartformat .
+#1624505559
+flutter -h
+#1624505567
+dart -h
+#1624505605
+flutter format
+#1624505612
+flutter format .
+#1624494757
+vi lib/main.dart
+#1624494757
+flutter emulators --launch test && cd ~/docs && v
+#1624508756
+vi ~/.vimrc 
+#1624508790
+pip install Pillow
+#1624508804
+pip list
+#1624508814
+pwd
+#1624508820
+cd
+#1624508820
+v
+#1624508846
+python3 pip install Pillow
+#1624508853
+python3 pip3 install Pillow
+#1624508857
+ pip3 install Pillow
+#1624508863
+v
+#1624508885
+vim --version | grep python
+#1624508974
+pwd
+#1624508976
+ls -a
+#1624509718
+vi ~/.vimrc 
+#1624510275
+pwd
+#1624510278
+cd ~/docs/
+#1624506184
+tmuxinator edit nhatngumoshimos
+#1624521533
+pwd
+#1624521542
+cd ..
+#1624521549
+node upload_firestore/
+#1624524846
+pwd
+#1624524848
+cd
+#1624524893
+pwd
+#1624524897
+cd dotfiles/
+#1624524872
+git clone https://github.com/vim/vim
+#1624524988
+./configure --enable-pythoninterp --prefix=/usr
+#1624524991
+cd vim/
+#1624524992
+./configure --enable-pythoninterp --prefix=/usr
+#1624525277
+./configure --prefix=/opt/local --with-features=huge --enable-pythoninterp --enable-python3interp
+#1624525304
+make
+#1624525420
+sudo make install
+#1624525436
+brew uninstall vim
+#1624525461
+echo "0000" | sudo -S cleanup -n 
+#1624525470
+cl
+#1624525475
+vi --version
+#1624525486
+vi .
+#1624525657
+pwd
+#1624525659
+cd
+#1624525662
+cd Desktop/
+#1624524898
+v
+#1624525762
+pwd
+#1624525763
+cd
+#1624525768
+sudo rm -R vim/
+#1624525777
+brew install vim
+#1624525935
+vi --version
+#1624525942
+cl
+#1624525949
+brew list
+#1624525965
+ranger --version
+#1624525969
+ranger
+#1624526577
+pip install ueberzug
+#1624526587
+sudo pip install ueberzug
+#1624526609
+sudo pip install ueberzug pillow-simd
+#1624526637
+python3 pip install ueberzug pillow-simd
+#1624526643
+python3 pip3 install ueberzug pillow-simd
+#1624527364
+cl
+#1624527368
+brew install mpv
+#1624494757
+cd ~/Developer/upload_firestore && vi data.json
+#1624528005
+ranger 
+#1624528044
+mpv --version
+#1624528064
+ranger 
+#1624528083
+brew uninstall mpv
+#1624528111
+rm -rf //usr/local/etc/mpv
+#1624528116
+rm -rf /usr/local/etc/mpv
+#1624528125
+rm -rf /usr/local/etc/mpv/encoding-profiles.conf
+#1624528127
+cl
+#1624528130
+pwd
+#1624528131
+cd
+#1624528138
+cd dotfiles/
+#1624528138
+v
+#1624528378
+vi ~/.vimrc 
+#1624528391
+v
+#1624528415
+vi ~/.vimrc 
+#1624528391
+v
+#1624528415
+vi ~/.vimrc 
+#1624528425
+
+#1624528435
+cl
+#1624505628
+v
+#1624528585
+pwd
+#1624525662
+v
+#1624528703
+vi ~/dotfiles/mac.sh 
+#1624510280
+v
+#1624530322
+ranger -h
+#1624530328
+ranger -cmd
+#1624530336
+ranger --cmd
+#1624530366
+ranger 
+#1624530426
+cl
+#1624530486
+pwd
+#1624530516
+ranger 
+#1624530754
+brew install nnn
+#1624531576
+cl
+#1624531577
+pwd
+#1624531585
+cl
+#1624528587
+v
+#1624532068
+flutter format
+#1624532075
+flutter format .
+#1624532079
+cl
+#1624536659
+pwd
+#1624494755
+tmuxinator start nhatngumoshimos
+#1624532080
+v
+#1624544584
+flutter pub get
+#1624545815
+pwd
+#1624545816
+cd
+#1624545828
+git clone https://github.com/jesusrp98/expand_widget
+#1624545837
+cd expand_widget/example/
+#1624545841
+flutter run
+#1624547163
+pwd
+#1624547302
+pwd
+#1624547311
+cd ~/Developer/upload_firestore
+#1624547314
+node upload_firestore/
+#1624547328
+cd ..
+#1624547329
+node upload_firestore/
+#1624544592
+v
+#1624550240
+flutter format .
+#1624550245
+v
+#1624552036
+echo '0000' | sudo -S shutdown -h now
+#1624547164
+v
+#1624536659
+v
+#1624583959
+pwd
+#1624584161
+cd /Users/becalm/Developer/nhatngu
+#1624584161
+cd ~/Developer
+#1624584161
+flutter format && vi lib/main.dart
+#1624594935
+flutter pub get
+#1624602263
+npm install -g eslint
+#1624584161
+cd ~/Developer/upload_firestore && vi data.json
+#1624602439
+pwd
+#1624602445
+node upload_firestore/
+#1624602723
+cl
+#1624584161
+flutter emulators --launch test && cd ~/docs && v
+#1624604276
+echo '0000' | sudo -S shutdown -h now
+#1624584159
+tmuxinator start nhatngumoshimos
+#1624602279
+v
+#1624594965
+v
+#1624604901
+cd /Users/becalm/Developer/nhatngu
+#1624604901
+cd ~/Developer
+#1624604901
+flutter format && vi lib/main.dart
+#1624605669
+flutter pub get
+#1624606146
+powd
+#1624606148
+pwd
+#1624606149
+cd nhatngu/
+#1624606161
+flutter pub add audioplayers
+#1624605684
+v
+#1624607357
+flutter pub add audioplayers
+#1624607374
+flutter pub get
+#1624604899
+tmuxinator start nhatngumoshimos
+#1624611251
+pwd
+#1624604901
+cd ~/Developer/upload_firestore && vi data.json
+#1624604901
+flutter emulators --launch test && cd ~/docs && v
+#1624612282
+tmux kill-server
+#1624607384
+v
+#1624611257
+vi ~/.tmux.conf 
+#1624612286
+cd /Users/becalm/Developer/nhatngu
+#1624612286
+cd ~/Developer
+#1624612312
+vi ~/.tmux.conf 
+#1624612983
+flutter pub get
+#1624614633
+brew install reactangle
+#1624614638
+cl
+#1624614647
+brew install rectabgke
+#1624614655
+brew install rectangle
+#1624615633
+brew install yabai
+#1624615991
+brew install amethyst
+#1624616228
+pwd
+#1624616232
+cl
+#1624616554
+pwd
+#1624616574
+brew uninstall rectangle
+#1624623525
+vi ~/.vimrc 
+#1624623556
+v
+#1624624170
+vi ~/.vimrc 
+#1624616244
+tmuxinator start nhatngumoshimos
+#1624624782
+vi ~/.vimrc 
+#1624626968
+v
+#1624626999
+pwd
+#1624627023
+v
+#1624627051
+cl
+#1624627052
+v
+#1624623556
+v
+#1624624170
+vi ~/.vimrc 
+#1624627051
+cl
+#1624627052
+v
+#1624627080
+
+#1624627083
+
+#1624627086
+pwd
+#1624627132
+vi ~/.vimrc 
+#1624627086
+pwd
+#1624627132
+vi ~/.vimrc 
+#1624627170
+
+#1624627179
+vi ~/.vimrc 
+#1624627671
+cl
+#1624627760
+vi ~/.vimrc 
+#1624627170
+
+#1624627179
+vi ~/.vimrc 
+#1624627671
+cl
+#1624627760
+vi ~/.vimrc 
+#1624627950
+
+#1624627953
+
+#1624627961
+pwd
+#1624627962
+cl
+#1624612286
+cd ~/Developer/upload_firestore && vi data.json
+#1624627037
+tmuxinator start nhatngumoshimos
+#1624628057
+pwd
+#1624628080
+cl
+#1624628118
+pwd
+#1624612286
+flutter format && vi lib/main.dart
+#1624612286
+flutter emulators --launch test && cd ~/docs && v
+#1624633377
+tmux kill-server
+#1624628218
+v
+#1624628110
+tmuxinator start nhatngumoshimos
+#1624633382
+cd /Users/becalm/Developer/nhatngu
+#1624633382
+cd ~/Developer
+#1624633396
+tmuxinator edit nhatngumoshimos
+#1624633382
+cd ~/Developer/upload_firestore && vi data.json
+#1624633416
+tmux kill-server
+#1624633382
+flutter format && vi lib/main.dart
+#1624633382
+flutter emulators --launch test && cd ~/docs && v
+#1624633419
+cd /Users/becalm/Developer/nhatngu
+#1624633419
+cd ~/Developer
+#1624633419
+cd ~/Developer/upload_firestore && vi data.json
+#1624633419
+flutter emulators --launch test && cd ~/docs && v
+#1624633419
+flutter format . && vi lib/main.dart
+#1624636966
+git clone https://github.com/httpie/httpie
+#1624636974
+cd httpie/
+#1624637001
+vi README.rst 
+#1624637113
+pwd
+#1624637124
+vi ~/Downloads/README.md 
+#1624637793
+cd /Users/becalm/Developer/nhatngu
+#1624637793
+cd ~/Developer
+#1624638494
+http www.tradingview.com/config
+#1624638548
+htpp www.tradingview.com/quotes
+#1624638556
+http www.tradingview.com/quote
+#1624638561
+http www.tradingview.com/quotes
+#1624638612
+http www.tradingview.com/accounts
+#1624638680
+http www.tradingview.com/api/authorize
+#1624637793
+flutter emulators --launch test && cd ~/docs && v
+#1624643906
+echo '0000' | sudo -S shutdown -h now
+#1624637792
+tmuxinator start nhatngumoshimos
+#1624637793
+cd ~/Developer/upload_firestore && vi data.json
+#1624640184
+v
+#1624637793
+flutter format . && vi lib/main.dart
+#1624670758
+pwd
+#1624670773
+cd /Users/becalm/Developer/nhatngu
+#1624670773
+cd ~/Developer
+#1624670859
+pwd
+#1624670862
+cd nhatngu/
+#1624670871
+  keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+#1624671100
+git gitignore -h
+#1624671105
+git -
+#1624671107
+git -h
+#1624671112
+git -help
+#1624671118
+git ignore -h
+#1624671131
+git config -h
+#1624671137
+pwd
+#1624671138
+cd
+#1624671149
+ls -a
+#1624671159
+vi ~/.gitconfig 
+#1624671192
+ls -a
+#1624671194
+vi ~/.gitconfig 
+#1624671198
+pwd
+#1624671205
+vi ~/dotfiles/
+#1624671217
+cd ~/dotfiles/
+#1624671219
+v
+#1624671221
+ls -a
+#1624671442
+cl
+#1624670773
+flutter format . && vi lib/main.dart
+#1624671572
+pwd
+#1624671572
+flutter build appbundle
+#1624671616
+v
+#1624671783
+flutter clean
+#1624671787
+flutter build appbundle
+#1624671881
+v
+#1624671935
+cl
+#1624671937
+flutter build appbundle
+#1624672128
+v
+#1624672166
+flutter build appbundle
+#1624672229
+v
+#1624672292
+flutter clean
+#1624672296
+flutter build appbundle
+#1624672393
+v
+#1624672409
+flutter clean
+#1624672414
+flutter build appbundle
+#1624672718
+flutter clean
+#1624672721
+v
+#1624672737
+flutter build appbundle
+#1624672840
+v
+#1624672879
+flutter build appbundle
+#1624672909
+v
+#1624672917
+pwd
+#1624672929
+ls
+#1624672939
+vi android/key.properties 
+#1624672985
+  keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+#1624673027
+vi android/key.properties 
+#1624673052
+flutter build appbundle
+#1624673059
+flutter clean
+#1624673063
+flutter build appbundle
+#1624674404
+cl
+#1624674610
+pwd
+#1624674612
+cd
+#1624674614
+keytool -genkeypair -alias upload -keyalg RSA -keysize 2048 -validity 9125 -keystore keystore.jks
+#1624674714
+cl
+#1624674715
+keytool -export -rfc -alias upload -file upload_certificate.pem -keystore keystore.jks  *
+#1624674721
+keytool -export -rfc -alias upload -file upload_certificate.pem -keystore keystore.jks
+#1624676208
+vi ~/.vimrc 
+#1624676231
+v
+#1624676324
+cl
+#1624676691
+vi ~/.vimrc 
+#1624674404
+v
+#1624676890
+cp ~/.vimrc ~/dotfiles/
+#1624676900
+cp ~/.alacritty.yml ~/dotfiles/
+#1624676916
+cp ~/.tmux.conf ~/dotfiles/
+#1624676918
+pwd
+#1624676920
+cd
+#1624676921
+ls -a
