@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 " Search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'pechorin/any-jump.vim'
 Plug 'easymotion/vim-easymotion' " only <leader>s to search one character
 Plug 'rhysd/clever-f.vim'
 Plug 'haya14busa/incsearch.vim'
@@ -31,22 +32,35 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround' " cs, ds, ys
 Plug 'tpope/vim-repeat'
 Plug 'francoiscabrol/ranger.vim'
-Plug 'preservim/nerdtree'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'preservim/tagbar'
 Plug 'vimwiki/vimwiki'
 Plug 'jiangmiao/auto-pairs'
 Plug 'andymass/vim-matchup'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'mbbill/undotree'
 Plug 'luochen1990/rainbow'
+Plug 'mhinz/vim-startify'
 Plug 'mg979/vim-xtabline' " Tabline customization with buffer filtering
 Plug 'AndrewRadev/splitjoin.vim' " No support for Dart, Swift
+Plug 'mhinz/vim-signify'
+Plug 'terryma/vim-expand-region'
+Plug 'wesQ3/vim-windowswap' " Swap your windows without ruining your layout
+" Directroy viewer
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-vinegar' " [] use with nerdtree
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Tmux
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'wellle/tmux-complete.vim' " [  ]test this
+Plug 'christoomey/vim-tmux-navigator'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+"Java
+Plug 'ervandew/eclim' "bring Eclipse functionality to the Vim editor
 " Flutter
 " Plug 'dart-lang/dart-vim-plugin'
 Plug 'natebosch/vim-lsc'
@@ -59,6 +73,7 @@ Plug 'keith/swift.vim'
 Plug 'arzg/vim-swift'
 
 " UI, theme
+Plug 'morhetz/gruvbox'
 Plug 'andreasvc/vim-256noir'
 Plug 'owickstrom/vim-colors-paramount'
 Plug 'whatyouhide/vim-gotham'
@@ -94,15 +109,16 @@ Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn in
 Plug 'lervag/vimtex'
 
 " python
-Plug 'deoplete-plugins/deoplete-jedi' " py for deoplete
-Plug 'davidhalter/jedi-vim'
-Plug 'jeetsukumaran/vim-pythonsense'
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'Shougo/echodoc.vim'
-Plug 'Shougo/neoinclude.vim'
-Plug 'deoplete-plugins/deoplete-tag'
-Plug 'Shougo/deoplete-clangx'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'python-mode/python-mode' " 5.4k stars"
+" Plug 'deoplete-plugins/deoplete-jedi' " py for deoplete
+" Plug 'davidhalter/jedi-vim'
+" Plug 'jeetsukumaran/vim-pythonsense'
+" Plug 'Vimjas/vim-python-pep8-indent'
+" Plug 'Shougo/echodoc.vim'
+" Plug 'Shougo/neoinclude.vim'
+" Plug 'deoplete-plugins/deoplete-tag'
+" Plug 'Shougo/deoplete-clangx'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " ruby
 Plug 'tpope/vim-endwise'
@@ -150,17 +166,12 @@ augroup DeleteWhiteSpace
   autocmd BufWritePre * :call TrimWhitespace()
 augroup END
 
-" colorscheme paramount
-colorscheme gotham256
-" TODO: hoac dung o ngoai bash chen vao trong .vimrc nay cung duoc
-" if (terminal.time >= 6pm){
-" background=dark
-" } else {
-" background=light
-" }
-" colorscheme 256_noir
-set background=dark
+colorscheme paramount
+" colorscheme gruvbox
+" colorscheme gotham256
 
+" TODO: hoac dung o ngoai bash chen vao trong .vimrc nay cung duoc
+set background=dark
 " set background=light
 
 " colorscheme onehalfdark
@@ -331,10 +342,10 @@ nnoremap <leader>h :History:<cr>
 
 "vim-move
 let g:move_map_keys = 0
-nmap <C-k> <Plug>MoveLineUp
-nmap <C-j> <Plug>MoveLineDown
 vmap <C-k> <Plug>MoveBlockUp
 vmap <C-j> <Plug>MoveBlockDown
+vmap <C-h> <Plug>MoveBlockLeft
+vmap <C-l> <Plug>MoveBlockLeft
 
 " airblade/vim-gitgutter
 nmap ]h <Plug>(GitGutterNextHunk)
@@ -434,3 +445,14 @@ autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownCli
 let g:ranger_map_keys = 0
 map <leader>rn :Ranger<CR>
 
+" change cursor color
+if &term =~ "xterm\\|rxvt"
+  " use an orange cursor in insert mode
+  let &t_SI = "\<Esc>]12;orange\x7"
+  " use a red cursor otherwise
+  let &t_EI = "\<Esc>]12;red\x7"
+  silent !echo -ne "\033]12;red\007"
+  " reset cursor when vim exits
+  autocmd VimLeave * silent !echo -ne "\033]112\007"
+  " use \003]12;gray\007 for gnome-terminal
+endif

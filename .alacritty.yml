@@ -39,10 +39,16 @@ font:
 background_opacity: 0.7
 draw_bold_text_with_bright_colors: false
 #
-# cursor:
-#   # style:
-#   #   shape: Block
-#   #   blinking: On
+cursor:
+  style:
+    shape: Block
+    blinking: On
+
+colors:
+  cursor:
+    cursor: '#fb4934'
+
+
 #   # vi_mode_style: Underline
 #   # blink_interval: 750
 #   # unfocused_hollow: true
@@ -61,22 +67,6 @@ draw_bold_text_with_bright_colors: false
 # #   # vi_mode_cursor:
 # #   #   text:   CellBackground
 # #   #   cursor: CellForeground
-# #   search:
-# #     matches:
-# #       foreground: '#000000'
-# #       background: '#ffffff'
-# #     focused_match:
-# #      foreground: CellBackground
-# #      background: CellForeground
-# #     bar:
-# #       background: ''
-# #       foreground: ''
-# #   line_indicator:
-# #     foreground: None
-# #     background: None
-# #   selection:
-# #     text:       CellBackground
-# #     background: CellForeground
 # #   bright:
 # #     black:   '#928374'
 # #     red:     '#fb4934'

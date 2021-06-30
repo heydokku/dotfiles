@@ -5,14 +5,23 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 # TODO:create script that open alacritty, firefox, note at the startup
 # brew install macvim git
-brew install node httpie
+brew install node go httpie
+# install GO packages
+# tmux-pomodoro
+go get github.com/justincampbell/tmux-pomodoro
+# OR download amd364 https://github.com/justincampbell/tmux-pomodoro/releases/tag/v1.2.1
+
+# rename tmux-pomodoro to pomodoro
+
 npm -g install instant-markdown-d eslint js-beautify stylelint typescript-formatter remark-cli fixjson
+npm install -g firebase-tools macos-key-cast
 # copy .git_ignore
 git clone https://github.com/heydokku/dotfiles
 git config --global core.excludesfile ~/.gitignore_global
 cp ~/dotfiles/.gitignore ~
 cp ~/dotfiles/.tmux.conf ~
 cp ~/dotfiles/.bash_profile ~
+echo '0000' | sudo pip install --upgrade google-api-python-client oauth2client progressbar2
 
 # .net for C#
 # brew install --cask dotnet-sdk
@@ -52,6 +61,7 @@ brew install robotsandpencils/made/xcodes # install specific version of xcodes, 
 brew install xcodegen
 brew install sourcekitten # need to install xcode
 brew install swiftlint gradle
+brew install clang-format
 # Font firacode
 brew tap homebrew/cask-fonts
 # hack nerd font nhin thanh manh
@@ -59,7 +69,7 @@ brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 
 # Tmux
-brew install tmux tmuxinator
+brew install tmux tmuxinator youtube-dl
 # tmuxinator's config files is located at ~/.config/tmuxinator/
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -73,7 +83,7 @@ brew install bat
 
 # brew install --cask unity-hub
 # Change the firefox download folder to ~/Developer folder
-brew install alacritty firefox vim
+brew install alacritty firefox qutebrowser vim amethyst
 # firefox
 # /Applications/Firefox.app/Contents/MacOS/firefox-bin --version
 
@@ -102,4 +112,5 @@ cleanup -n
 
 # flutter
 brew install flutter
+dart pub global activate fvm
 # flutter upgrade && flutter pub upgrade

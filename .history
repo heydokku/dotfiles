@@ -875,3 +875,901 @@ pwd
 cd
 #1624676921
 ls -a
+#1624676945
+cp ~/.history ~/dotfiles/
+#1624676988
+cd docs/
+#1624676991
+git init
+#1624677047
+cl
+#1624677057
+echo '0000' | sudo -S shutdown -h now
+#1624670770
+tmuxinator start nhatngumoshimos
+#1624670773
+flutter emulators --launch test && cd ~/docs && v
+#1624670773
+cd ~/Developer/upload_firestore && vi data.json
+#1624678162
+pwd
+#1624678223
+cd dotfiles/
+#1624678232
+git commit -m "update 3
+#1624678237
+git log
+#1624678248
+git commit -m "update 3"
+#1624678254
+git add .
+#1624678256
+git commit -m "update 3"
+#1624678262
+git push
+#1624678296
+cl
+#1624678299
+echo '0000' | sudo -S shutdown -h now
+#1624840490
+vi ~/dotfiles/mac.sh 
+#1624840858
+tar -zxvf ~/Downloads/tmux-pomodoro*.tar.gz
+#1624840918
+pwd
+#1624840948
+mv tmux-pomodoro /usr/local/bin/
+#1624840962
+vi ~/.tmux.conf 
+#1624841013
+cd /Users/becalm/Developer/nhatngu
+#1624841013
+cd ~/Developer
+#1624841013
+flutter format . && vi lib/main.dart
+#1624841062
+vi ~/.vimrc 
+#1624841230
+pomodoro start
+#1624841232
+pwd
+#1624841294
+brew install go
+#1624841380
+go get github.com/justincampbell/tmux-pomodoro
+#1624841398
+pomodoro start
+#1624841447
+go --version
+#1624841459
+go pomodoro start
+#1624841463
+go help
+#1624841476
+go version
+#1624841012
+tmuxinator start nhatngumoshimos
+#1624841303
+vi ~/dotfiles/mac.sh 
+#1624841013
+cd ~/Developer/upload_firestore && vi data.json
+#1624841013
+flutter emulators --launch test && cd ~/docs && v
+#1624841496
+tmux kill-server
+#1624841518
+go pomodoro start
+#1624843143
+vi ~/.bash_profile 
+#1624843215
+tmux-pomodoro start
+#1624843311
+/Users/becalm/go/bin/tmux-pomodoro ; exit;
+#1624843324
+pomodoro start
+#1624843331
+tmux-pomodoro start
+#1624843345
+go tmux-pomodoro start
+#1624843417
+/Users/becalm/Downloads/tmux-pomodoro start 
+#1624843433
+pomodoro start
+#1624843511
+pomodoro stop
+#1624843520
+pomodoro clear
+#1624843530
+cd /Users/becalm/Developer/nhatngu
+#1624843530
+cd ~/Developer
+#1624843554
+pomodoro start
+#1624843571
+pomodoro -h
+#1624843576
+pomodoro status
+#1624843583
+vi ~/.tmux.conf 
+#1624845854
+vi ~/dotfiles/mac.sh 
+#1624847242
+cl
+#1624847244
+sudo pip install --upgrade google-api-python-client oauth2client progressbar2
+#1624847267
+echo '0000' | sudo pip install --upgrade google-api-python-client oauth2client progressbar2
+#1624847357
+cl
+#1624843530
+flutter emulators --launch test && cd ~/docs && v
+#1624847551
+cl
+#1624847557
+shoogle -h
+#1624848550
+pwd
+#1624848751
+/Users/becalm/Downloads/youtubeuploader_mac_amd64 ; exit;
+#1624847360
+vi ~/dotfiles/mac.sh 
+#1624843530
+flutter format . && vi lib/main.dart
+#1624851990
+tmux kill-server
+#1624843530
+cd ~/Developer/upload_firestore && vi data.json
+#1624848551
+v
+#1624843528
+tmuxinator start nhatngumoshimos
+#1624851992
+cl
+#1624852007
+pwd
+#1624852017
+flutter create dautruongTiengNhat
+#1624852044
+cd docs/
+#1624852044
+v
+#1624852783
+pwd
+#1624852786
+cd
+#1624852814
+tmuxinator new dautruongTiengNhat
+#1624853144
+pwd
+#1624853154
+ls -a
+#1624853174
+vi ~/.config/tmuxinator/
+#1624853209
+cl
+#1624853230
+flutter create -h
+#1624853299
+flutter create --org=com.mosimos dautruongtiengNhat
+#1624853310
+flutter create --org=com.mosimos 'dautruongtiengNhat'
+#1624853417
+flutter create --org com.mosimos dautruongtiengNhat
+#1624853459
+flutter create --org com.mosimos dautruongtiengnhat
+#1624855435
+cl
+#1624855691
+pwd
+#1624855727
+tmuxinator start dautruongtiengnhat/
+#1624855734
+pwd
+#1624855795
+tmuxinator edit dautruongtiengnhat/
+#1624855801
+pwd
+#1624855795
+tmuxinator edit dautruongtiengnhat/
+#1624855801
+pwd
+#1624855805
+
+#1624855812
+vi ~/.config/tmuxinator/
+#1624855825
+pwd
+#1624855826
+ls -a
+#1624855853
+sudo rm -R dautruongtiengnhat/
+#1624855860
+cl
+#1624855865
+pwd
+#1624855885
+cd Developer/
+#1624855889
+flutter create --org com.mosimos dautruongtiengnhat
+#1624855896
+cl
+#1624856046
+pwd
+#1624856214
+ls
+#1624856333
+tmuxinator start dautruongtiengnhat/
+#1624856351
+vi ~/.config/tmuxinator/
+#1624856414
+cd /Users/becalm/Developer/dautruongtiengnhat
+#1624856414
+vim
+#1624856500
+tmuxinator edit dautruongTiengNhat
+#1624856519
+tmux kill-server
+#1624856414
+cd ~/docs && vi
+#1624856413
+tmuxinator start dautruongTiengNhat
+#1624856528
+cd /Users/becalm/Developer/dautruongtiengnhat
+#1624856528
+vim
+#1624856550
+pwd
+#1624856552
+ls
+#1624856555
+vi
+#1624856623
+vi ~/.vimrc 
+#1624856660
+cl
+#1624856714
+vi ~/.vimrc 
+#1624856528
+cd ~/docs && vi
+#1624857220
+tmux kill-server
+#1624857223
+cd /Users/becalm/Developer/dautruongtiengnhat
+#1624857223
+vim
+#1624857232
+tmuxinator edit dautruongTiengNhat
+#1624857223
+cd ~/docs && vi
+#1624857249
+tmux kill-server
+#1624857257
+cd /Users/becalm/Developer/dautruongtiengnhat
+#1624857257
+vim
+#1624857261
+vi .
+#1624857264
+vi
+#1624857257
+cd ~/docs && vim
+#1624857285
+tmuxinator edit dautruongTiengNhat
+#1624857380
+vi ~/.gitconfig 
+#1624857307
+tmuxinator edit nhatngumoshimos
+#1624857404
+tmux kill-server
+#1624857407
+cd /Users/becalm/Developer/dautruongtiengnhat
+#1624857407
+cd ~/Developer
+#1624875073
+cd /Users/becalm/Developer/nhatngu
+#1624875073
+cd ~/Developer
+#1624875072
+tmuxinator start nhatngumoshimos
+#1624875073
+flutter format . && vi lib/main.dart
+#1624876630
+vi ~/.vimrc 
+#1624876667
+pwd
+#1624876674
+pomodoro -h
+#1624876679
+pomodoro status
+#1624876727
+pomodoro start
+#1624875073
+cd ~/Developer/upload_firestore && vi data.json
+#1624876877
+tmux kill-server
+#1624875073
+flutter emulators --launch test && cd ~/docs && v
+#1624857407
+flutter format . && vi lib/main.dart
+#1624857407
+cd ~/Developer/upload_firestore && vi data.json
+#1624857407
+flutter emulators --launch test && cd ~/docs && v
+#1624877324
+cl
+#1624877357
+cd /Users/becalm/Developer/nhatngu
+#1624877357
+cd ~/Developer
+#1624877357
+flutter format . && vi lib/main.dart
+#1624877375
+vi ~/.vimrc 
+#1624877324
+cl
+#1624877357
+cd /Users/becalm/Developer/nhatngu
+#1624877357
+flutter format . && vi lib/main.dart
+#1624877375
+vi ~/.vimrc 
+#1624877385
+
+#1624877388
+
+#1624877391
+v
+#1624877357
+flutter emulators --launch test && cd ~/docs && v
+#1624877409
+v
+#1624877857
+vi ~/.vimrc 
+#1624877888
+v
+#1624880466
+echo '0000' | sudo -S shutdown -h now
+#1624877355
+tmuxinator start nhatngumoshimos
+#1624877357
+cd ~/Developer/upload_firestore && vi data.json
+#1624881100
+pwd
+#1624881183
+pomodoro start
+#1624881190
+pomodoro status
+#1624881269
+cl
+#1624881291
+cd ~/docs && vi
+#1624883772
+echo '0000' | sudo -S shutdown -h now
+#1624889102
+cd /Users/becalm/Developer/nhatngu
+#1624889102
+cd ~/Developer
+#1624890294
+cl
+#1624890336
+/Users/becalm/Downloads/upload_youtube mosimos1.mov
+#1624890427
+/Users/becalm/Downloads/upload_youtube -filename mosimos1.mov
+#1624890470
+/Users/becalm/Downloads/upload_youtube -filename /Users/becalm/Downloads/mosimos1.mov
+#1624890479
+pwd
+#1624890493
+/Users/becalm/Downloads/upload_youtube -filename /Users/becalm/Downloads/mosimos1.mov
+#1624890827
+cl
+#1624893354
+tmux kill-server
+#1624889102
+flutter emulators --launch test && cd ~/docs && v
+#1624889102
+flutter format . && vi lib/main.dart
+#1624889102
+cd ~/Developer/upload_firestore && vi data.json
+#1624889100
+tmuxinator start nhatngumoshimos
+#1624893361
+cd /Users/becalm/Developer/dautruongtiengnhat
+#1624893361
+cd ~/Developer
+#1624893950
+pwd
+#1624893951
+cd
+#1624893955
+ls -a
+#1624893966
+cd automation/
+#1624893967
+ls -a
+#1624893971
+vi flutter.sh 
+#1624894587
+pwd
+#1624894599
+cd ~/Developer/dautruongtiengnhat/
+#1624894608
+bash ~/automation/flutter.sh 
+#1624893361
+flutter format . && vi lib/main.dart
+#1624894727
+pub help
+#1624894736
+flutter pub help
+#1624894742
+flutter pub add -h
+#1624895059
+vi ~/automation/flutter.sh 
+#1624895134
+bash ~/automation/flutter.sh 
+#1624923499
+cl
+#1624923505
+tmuxinator edit dautruongTiengNhat
+#1624923720
+tmuxinator start dautruongTiengNhat
+#1624923728
+tmux kill-server
+#1624893361
+cd ~/Developer/upload_firestore && vi data.json
+#1624893361
+flutter emulators --launch test && cd ~/docs && v
+#1624893361
+cd /Users/becalm/Developer/dautruongtiengnhat
+#1624893361
+flutter format . && vi lib/main.dart
+#1624894693
+
+#1624894696
+v
+#1624893360
+tmuxinator start dautruongTiengNhat
+#1624923822
+tmuxinator edit dautruongTiengNhat
+#1624924267
+cd /Users/becalm/Developer/dautruongtiengnhat
+#1624924267
+flutter emulators --launch test && cd ~/docs && v
+#1624924267
+flutter format . && vi lib/main.dart
+#1624924296
+tmux kill-server
+#1624924296
+tmux kill-server
+#1624924266
+tmuxinator start dautruongTiengNhat
+#1624924302
+tmuxinator edit dautruongTiengNhat
+#1624924463
+cd /Users/becalm/Developer/dautruongtiengnhat
+#1624924463
+flutter format . && vi lib/main.dart
+#1624924476
+tmux kill-server
+#1624924463
+flutter emulators --launch test && cd ~/docs && v
+#1624924462
+tmuxinator start dautruongTiengNhat
+#1624924480
+tmuxinator edit dautruongTiengNhat
+#1624924491
+cd /Users/becalm/Developer/dautruongtiengnhat
+#1624924491
+flutter format . && vi lib/main.dart
+#1624924506
+tmux kill-server
+#1624924491
+flutter emulators --launch test && cd ~/docs && v
+#1624924490
+tmuxinator start dautruongTiengNhat
+#1624924508
+tmuxinator edit dautruongTiengNhat
+#1624924571
+cd /Users/becalm/Developer/dautruongtiengnhat
+#1624924571
+flutter format . && vi lib/main.dart
+#1624924581
+tmux kill-server
+#1624924571
+flutter emulators --launch test && cd ~/docs && v
+#1624924570
+tmuxinator start dautruongTiengNhat
+#1624924585
+cl
+#1624924590
+tmuxinator edit dautruongTiengNhat
+#1624924649
+cp ~/.config/tmuxinator/dautruongTiengNhat.yml ~/dotfiles/
+#1624924671
+mkdir ~/dotfiles/tmuxinator
+#1624924697
+pwd
+#1624925607
+cd /Users/becalm/Developer/dautruongtiengnhat
+#1624925607
+flutter emulators --launch test && cd ~/docs && v
+#1624925646
+tmuxinator edit dautruongTiengNhat
+#1624925673
+pwd
+#1624925674
+v
+#1624925607
+flutter format . && vi lib/main.dart
+#1624925683
+tmux kill-server
+#1624925606
+tmuxinator start dautruongTiengNhat
+#1624925686
+cd /Users/becalm/Developer/dautruongtiengnhat
+#1624925686
+flutter emulators --launch test && cd ~/docs && vi ~/flutter/index.md
+#1624925706
+tmuxinator edit dautruongTiengNhat
+#1624925802
+tmux kill-server
+#1624925686
+flutter format . && vi lib/main.dart
+#1624925810
+cd /Users/becalm/Developer/dautruongtiengnhat
+#1624925810
+cd ~/docs && vi /flutter/index.md
+#1624925833
+tmuxinator edit dautruongTiengNhat
+#1624925904
+tmux kill-server
+#1624925810
+flutter format . && vi lib/main.dart
+#1624925913
+cd /Users/becalm/Developer/dautruongtiengnhat
+#1624925913
+cd ~/docs && vi ~/docs/flutter/index.md
+#1624936029
+pwd
+#1624946776
+cd /Users/becalm/Developer/nhatngu
+#1624946776
+cd ~/Developer
+#1624946775
+tmuxinator start nhatngumoshimos
+#1624953124
+npm install -g firebase-tools
+#1624953170
+firebase -h
+#1624953214
+firebase login
+#1624953252
+firebase project:lst
+#1624953259
+firebase project:list
+#1624953267
+firebase projecst:list
+#1624953276
+firebase projects:list
+#1624954584
+firebase -h
+#1624936030
+v
+#1624956313
+pwd
+#1624956317
+firebase -v
+#1624956323
+firebase -V
+#1624956331
+firebase -h
+#1624956456
+firebase projects:list
+#1624956479
+pwd
+#1624956482
+cd
+#1624956488
+firebase init
+#1624956949
+pwd
+#1624956950
+ls
+#1624956957
+vi functions/
+#1624956962
+cl
+#1624956970
+vi functions/
+#1624958188
+firebase deploy
+#1624958384
+vi ~/dotfiles/mac.sh 
+#1624958557
+owd
+#1624958560
+pwd
+#1624958452
+firebase deploy
+#1624958672
+cl
+#1624958712
+firebase  -h
+#1624959839
+ic;
+#1624959842
+cl
+#1624959916
+pwd
+#1624959921
+vi functions/
+#1624959989
+pwd
+#1624959989
+cd
+#1624959991
+cd functions/
+#1624959992
+v
+#1624960041
+ pwd
+#1624960042
+c
+#1624960043
+cd
+#1624960044
+ls
+#1624960046
+vi firebase.json 
+#1624958578
+cd ~/docs && vi
+#1624963263
+tmuxinator start nhatngumoshimos
+#1624946776
+flutter format . && vi lib/main.dart
+#1624984456
+vi ~/dotfiles/mac.sh 
+#1624984611
+brew install https://firebase.google.com/docs/functions/use-cases
+#1624984618
+brew install youtube-dl
+#1624984682
+vi ~/dotfiles/mac.sh 
+#1624984717
+youtube-dl https://www.youtube.com/watch?v=HdOeZn-R5oc -f mp4
+#1624984775
+pwd
+#1624984776
+ls -a
+#1624984855
+cl
+#1624946776
+flutter emulators --launch test && cd ~/docs && v
+#1624985114
+cl
+#1624985127
+pwd
+#1624985216
+vi ~/dotfiles/mac.sh 
+#1624985208
+brew install qutebrowser
+#1624985664
+cl
+#1624985675
+brew tap lecafarias/fvm
+#1624985708
+brew install fvm
+#1624985784
+pwd
+#1624985786
+cd
+#1624985792
+dart -h
+#1624985796
+cl
+#1624985805
+dart pub gloal activate fvm
+#1624985816
+dart pub global activate fvm
+#1624985826
+vi ~/dotfiles/mac.sh 
+#1624985911
+pwd
+#1624985912
+cl
+#1624986046
+pwd
+#1624986183
+cl
+#1624986309
+fvm list
+#1624986317
+fvm list
+#1624986319
+cl
+#1624986321
+tmux kill-server
+#1624946776
+cd ~/Developer/upload_firestore && vi data.json
+#1624925913
+vi lib/main.dart
+#1624939020
+tmuxinator start dautruongTiengNhat
+#1624986328
+fvm list
+#1624986352
+fvm -h
+#1624986356
+dart list
+#1624986366
+dart pub -h
+#1624986373
+cl
+#1624986376
+dart pub deps
+#1624986380
+pwd
+#1624986427
+dart pub global activate fvm
+#1624986934
+vi ~/.bash_profile 
+#1624987066
+source ~/.bash_profile 
+#1624987068
+cl
+#1624987263
+cd ~/docs && vim
+#1624987498
+brew install hyperfine
+#1624987521
+hyperfine -h
+#1624987536
+hyperfine -h rg sd fzf d
+#1624987540
+cl
+#1624987799
+pwd
+#1624987849
+vi ~/.vimrc 
+#1624988201
+cl
+#1624988570
+npm install -g macos-key-cast
+#1624988595
+key-cast 
+#1624988695
+vi ~/dotfiles/mac.sh 
+#1625038641
+cl
+#1625038757
+gh --version
+#1625038774
+gh -v
+#1625038776
+gh -h
+#1625038777
+cl
+#1625040054
+cd ~/docs && vim
+#1625042177
+cl
+#1625043055
+which java
+#1625043061
+which java hyperfine
+#1625043072
+which flutter
+#1625043100
+cd ~/docs && vim
+#1625043104
+vi
+#1625043107
+vi ~/.vimrc 
+#1625044509
+cl
+#1625044644
+vi ~/.vimrc 
+#1625045780
+cl
+#1625045786
+echo "0000" | sudo -S cleanup -n 
+#1625045807
+echo '0000' | sudo -S shutdown -h now
+#1625046363
+pwd
+#1625047872
+vi ~/.alacritty.yml 
+#1625048266
+vi ~/.vimrc 
+#1625048300
+cl
+#1625048301
+v
+#1625048306
+vi .
+#1625048307
+vi
+#1625048511
+cl
+#1625048513
+vi ~/.alacritty.yml 
+#1625048672
+cl
+#1625048687
+vi ~/.vimrc 
+#1625048698
+vi ~/.alacritty.yml 
+#1625048722
+cl
+#1625048782
+ck
+#1625048783
+cl
+#1625048794
+pwd
+#1625048797
+df -bm -H
+#1625048862
+ls
+#1625048872
+cd ..
+#1625048873
+pwd
+#1625048894
+sudo rm -R /Applications/Zalo.app/
+#1625048921
+cl
+#1625048936
+vi ~/.alacritty.yml 
+#1625048962
+cl
+#1625050094
+pwd
+#1625050156
+cd ~/docs && vim
+#1625052447
+cl
+#1625052460
+git clone https://github.com/heydokku/docs/tree/main/elixir docs
+#1625052473
+git clone https://github.com/heydokku/docs
+#1625052476
+git clone https://github.com/heydokku/docs docs
+#1625052481
+pwd
+#1625052483
+v
+#1625052830
+pwd
+#1625052832
+v
+#1625052851
+cd docs/
+#1625052872
+sudo rm -R /.git
+#1625052880
+pwd
+#1625052884
+ls -a
+#1625052889
+sudo rm -R .git
+#1625052898
+sudo rm -R .gitignore 
+#1625052899
+cl
+#1625052902
+pwd
+#1625052904
+v
+#1625052913
+cd ..
+#1625052915
+cl
+#1625052916
+v
+#1625053306
+cl
+#1625053321
+echo '0000' | sudo -S shutdown -h now
+#1625054419
+cp ~/.tmux.conf ~/dotfiles/
