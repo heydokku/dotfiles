@@ -1,66 +1,100 @@
 call plug#begin('~/.vim/plugged')
-" very fast now
+
 " Search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'pechorin/any-jump.vim'
-Plug 'easymotion/vim-easymotion' " only <leader>s to search one character
+Plug 'pechorin/any-jump.vim' " best find refererences plugin <leader>j <leader>ab to go back
+Plug 'tpope/vim-abolish' " TODO
+
+" o/<CR>     open
+" s          open in split
+" v          open in vsplit
+" t          open in new tab
+" p/<tab>    preview
+" q/x        exit
+" r          references
+" b          back to first result
+" T          group by file
+" a          load next N results
+" A          load all results
+" L          toggle results lists ui style
+
+Plug 'easymotion/vim-easymotion' " <leader>s: search one character
 Plug 'rhysd/clever-f.vim'
 Plug 'haya14busa/incsearch.vim'
-Plug 'voldikss/vim-browser-search' " search with duckduckgo
-
 Plug 'alaviss/nim.nvim'
 
 " Git-related
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-rhubarb' " GBrowser: to open file on Github
 Plug 'airblade/vim-gitgutter'
+Plug 'jaxbot/github-issues.vim' "TODO: search github issues NICE
 
 " Editor enhancements
+Plug 'Konfekt/FastFold' "updating folds only when called-for.
+Plug 'itchyny/calendar.vim' "TODO
+Plug 'AndrewRadev/switch.vim' "TODO switch to true to false and reverse
+Plug 'jceb/vim-orgmode' "TODO
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } } " TODO search docs
 Plug 'MattesGroeger/vim-bookmarks'
-Plug 'matze/vim-move' " 5<A-k> will move the selection up by 5 lines
+Plug 'matze/vim-move' " 5<C-k> will move the selection up by 5 lines
 Plug 'tpope/vim-unimpaired' " insert space ]<Space>, ]e: exchange line
 Plug 'szw/vim-maximizer' " maximize the current buffer. <F3>
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim' " used with Goyo
 Plug 'wellle/targets.vim' " da, or da. delete inside commna object. TODO:
 Plug 'wincent/terminus' " enhance the terminal with pastemode, change cursor shape from when switch from normal mode to insert mode
-Plug 'ervandew/supertab' " search in a folder, so nice
-Plug 'itchyny/lightline.vim'
-Plug 'bfrg/vim-qf-diagnostics'
+Plug 'ervandew/supertab' " autocompletion with tab
+Plug 'itchyny/lightline.vim' " light weight status bar
+Plug 'bfrg/vim-qf-diagnostics' " <leader>e to show the error in preview window
 Plug 'machakann/vim-highlightedyank'
 Plug 'christoomey/vim-system-copy' " use cp to copy to system, cv to paste
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround' " cs, ds, ys
+Plug 'tomtom/tcomment_vim' " <leader>cc to toggle comment
+Plug 'machakann/vim-sandwich' " saw* better than vim-surround
 Plug 'tpope/vim-repeat'
-Plug 'francoiscabrol/ranger.vim'
 Plug 'preservim/tagbar'
+Plug 'tpope/vim-projectionist' "TODO
+Plug 'tpope/vim-sleuth' " automatically expandtab
+" Plug 'ludovicchabant/vim-gutentags' " manage your tag files
 Plug 'vimwiki/vimwiki'
 Plug 'jiangmiao/auto-pairs'
+Plug 'Raimondi/delimitMate' " provides insert mode auto-completion for quotes, parens, brackets, etc
 Plug 'andymass/vim-matchup'
-Plug 'mbbill/undotree'
+Plug 'mbbill/undotree' " TODO
 Plug 'luochen1990/rainbow'
 Plug 'mhinz/vim-startify'
 Plug 'mg979/vim-xtabline' " Tabline customization with buffer filtering
 Plug 'AndrewRadev/splitjoin.vim' " No support for Dart, Swift
-Plug 'mhinz/vim-signify'
-Plug 'terryma/vim-expand-region'
+Plug 'mhinz/vim-signify' " initial screen for vim
+Plug 'terryma/vim-expand-region' " use = to expand the region
 Plug 'wesQ3/vim-windowswap' " Swap your windows without ruining your layout
+Plug 'chrisbra/NrrwRgn' " focus on a selected region while making the rest inaccessible <leader>nr
+Plug 'thinca/vim-quickrun' " run a blocl of command
+Plug 'dyng/ctrlsf.vim' " search asynchronously, display the result windows vertically
+Plug 'jez/vim-superman' " open man page with vi
+Plug 'AndrewRadev/sideways.vim' " move function arguments lef
+
 " Directroy viewer
 Plug 'preservim/nerdtree'
-Plug 'tpope/vim-vinegar' " [] use with nerdtree
+Plug 'Shougo/defx.nvim'" Powerful file explorer implemented
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Tmux
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'wellle/tmux-complete.vim' " [  ]test this
 Plug 'christoomey/vim-tmux-navigator'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" elixir
+Plug 'elixir-editors/vim-elixir'
+Plug 'mhinz/vim-mix-format'
+
 "Java
 Plug 'ervandew/eclim' "bring Eclipse functionality to the Vim editor
+
 " Flutter
 " Plug 'dart-lang/dart-vim-plugin'
 Plug 'natebosch/vim-lsc'
@@ -72,6 +106,10 @@ Plug 'tfnico/vim-gradle'
 Plug 'keith/swift.vim'
 Plug 'arzg/vim-swift'
 
+" vim
+Plug 'tpope/vim-scriptease'
+Plug 'junegunn/vader.vim' " test framework for vim
+Plug 'thinca/vim-themis' " test vim
 " UI, theme
 Plug 'morhetz/gruvbox'
 Plug 'andreasvc/vim-256noir'
@@ -82,22 +120,26 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'janko/vim-test'
 
 " Debug
-Plug 'puremourning/vimspector'
+" Plug 'puremourning/vimspector'
+
 " no support for go, dart, swift
 Plug 'kassio/neoterm' " open REPL in the same file.
 
 " Csharp
 Plug 'OmniSharp/omnisharp-vim'
 
-" Linting and Format
-" Plug 'sbdchd/neoformat'
-Plug 'Chiel92/vim-autoformat'
+" lsp
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'SirVer/ultisnips' " 6.3k stars
 
-" Plug 'dense-analysis/ale'
+" Linting and Format
+Plug 'dense-analysis/ale'
+
 " scss & css
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'ap/vim-css-color'
+
 " Markdown
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-pandoc/vim-pandoc' "integrate Vim with the pandoc document converter
@@ -105,20 +147,11 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'godlygeek/tabular'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'} " InstantMarkDown
 
-" latex
+" latex, pdf
 Plug 'lervag/vimtex'
 
 " python
 Plug 'python-mode/python-mode' " 5.4k stars"
-" Plug 'deoplete-plugins/deoplete-jedi' " py for deoplete
-" Plug 'davidhalter/jedi-vim'
-" Plug 'jeetsukumaran/vim-pythonsense'
-" Plug 'Vimjas/vim-python-pep8-indent'
-" Plug 'Shougo/echodoc.vim'
-" Plug 'Shougo/neoinclude.vim'
-" Plug 'deoplete-plugins/deoplete-tag'
-" Plug 'Shougo/deoplete-clangx'
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " ruby
 Plug 'tpope/vim-endwise'
@@ -138,7 +171,7 @@ Plug 'yuezk/vim-js', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', '
 " Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
 " Plug 'jelera/vim-javascript-syntax', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
 "Plug 'jaxbot/browserlink.vim'
-Plug 'HerringtonDarkholme/yats.vim' "TypeScript Syntax Highlighting in Vim
+Plug 'HerringtonDarkholme/yats.vim' "most advanced TypeScript Syntax Highlighting in Vim
 " Plug 'posva/vim-vue'
 " Plug 'evanleck/vim-svelte', {'branch': 'main'}
 " Plug 'leafOfTree/vim-svelte-plugin'
@@ -149,9 +182,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'pantharshit00/vim-prisma'
-
-
-" Other visual enhancement
 
 call plug#end()
 
@@ -166,71 +196,74 @@ augroup DeleteWhiteSpace
   autocmd BufWritePre * :call TrimWhitespace()
 augroup END
 
-colorscheme paramount
-" colorscheme gruvbox
+" colorscheme paramount
+colorscheme gruvbox
 " colorscheme gotham256
 
 " TODO: hoac dung o ngoai bash chen vao trong .vimrc nay cung duoc
 set background=dark
 " set background=light
 
-" colorscheme onehalfdark
-" default options
-noremap ; :
-
 " Save & quit
 noremap Q :q<CR>
-
+" default options
+noremap ; :
 " close all windows
 nnoremap <leader>Q :qa!<cr>
-
 noremap <C-q> :qa<CR>
 noremap S :w<CR>
-
 " make Y to copy till the end of the line
 nnoremap Y y$
-
-" Copy to system clipboard
-vnoremap Y "+y
 
 " Faster navigation
 noremap <silent> U 5k
 noremap <silent> E 5j
+
 " Faster in-line navigation
 noremap W 5w
 noremap B 5b
+
 " Go to tab
 " gt and gT
 
 " code folding
 set completeopt-=preview " disable for vim-lsc auto completion
+" fold by languages syntax such as python, go.. recommend
 set foldmethod=syntax
+" fold by indent
+" set foldmethod=indent
+" fold by manual(default), type za, zf
+" set foldmethod=manual
+set nofoldenable " files will not be foled when open
 set foldlevelstart=99
 set foldnestmax=10
-set foldlevel=1
+set foldlevel=2
+" toggle folding
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
+
 set noshowmode
-set nobackup
 set nowb
+set nobackup " don't create backup files
 set nocompatible
 set noswapfile
-set nonumber
+set number " show line number
 set hidden
 set mouse=a " if I accidentally use the mouse
-set splitright " splits to the right
-set splitbelow " splits below
 set expandtab " space characters instead of tab
 set tabstop=2 " tab equals 2 spaces
 set shiftwidth=2 " indentation
+
 set ignorecase " search case insensitive
 set smartcase " search via smartcase
 set hidden " allow hidden buffers
-set nobackup " don't create backup files
-set nowritebackup " don't create backup files
 set signcolumn=yes " add a column for sings (e.g. LSP, ...)
 set updatetime=520 " time until update
 set undofile " persists undo tree
 set laststatus=2
-filetype plugin indent on " enable detection, plugins and indents
+filetype plugin on " enable detection, plugins and indents
 syntax on
 let mapleader = " " " space as leader key
 let g:netrw_banner=0 " disable banner in netrw
@@ -241,6 +274,12 @@ nnoremap <leader>v :e $MYVIMRC<CR> "view quickly command
 nmap <Leader>rl :source $MYVIMRC
 
 " preservim/nerdtree
+" TODO: open vertically split: gi, cursor stay at the current position
+" i........Open selected file in a split window.......................|NERDTree-i|
+" s........Open selected file in a new vsplit.........................|NERDTree-s|
+" C........Change the tree root to the selected directory.............|NERDTree-C|
+" U........Same as 'u' except the old root node is left open..........|NERDTree-U|
+" I........Toggle whether hidden files displayed......................|NERDTree-I|
 nnoremap <leader>n :NERDTreeFind<CR>
 nnoremap <leader>b :NERDTreeToggle<CR>
 " Exit Vim if NERDTree is the only window left.
@@ -251,19 +290,11 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
       \ quit | endif
 
-" tpope/vim-fugitive
-nnoremap <leader>gg :G<cr>
-nnoremap <leader>gd :Gdiff master<cr>
-nnoremap <leader>gl :G log -100<cr>
-nnoremap <leader>gp :G push<cr>
-
 " janko/vim-test
 nnoremap <silent> tt :TestNearest<CR>
 nnoremap <silent> tf :TestFile<CR>
 nnoremap <silent> ts :TestSuite<CR>
 nnoremap <silent> t_ :TestLast<CR>
-let test#strategy = "neovim"
-let test#neovim#term_position = "vertical"
 
 " puremourning/vimspector
 fun! GotoWindow(id)
@@ -316,8 +347,8 @@ augroup END
 " vimwiki/vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_ext2syntax = {'.md': 'markdown',
-                  \ '.mkd': 'markdown',
-                  \ '.mdown': 'markdown'}
+      \ '.mkd': 'markdown',
+      \ '.mdown': 'markdown'}
 let g:taskwiki_markup_syntax = 'markdown'
 
 
@@ -339,6 +370,8 @@ let $FZF_DEFAULT_COMMAND = "rg --files --hidden --glob '!.git/**' --glob '!build
 nnoremap <leader>f :Files<cr>
 nnoremap <leader>g :Rg<cr>
 nnoremap <leader>h :History:<cr>
+nnoremap <leader>cc :TComment<cr>
+nnoremap <leader>T :TagbarToggle<CR>
 
 "vim-move
 let g:move_map_keys = 0
@@ -361,13 +394,14 @@ nnoremap <leader>rs :FlutterHotRestart<cr>
 nnoremap <leader>re :FlutterEmulators<cr>
 nnoremap <leader>rr :FlutterRun<cr>
 nnoremap <leader>rq :FlutterQuit<cr>
-nnoremap <leader>fD :FlutterVisualDebug<cr>
 
 " vim-bookmark
-nmap ms <Plug>BookmarkShowAll
+nmap <leader>aa <Plug>BookmarkShowAll
+nmap <leader>am :BookmarkToggle<cr>
 let g:bookmark_sign = '>'
 let g:bookmark_save_per_working_dir = 1
 let g:bookmark_highlight_lines = 1
+" TODO:  change bookmark mm to <leader>somekey
 " Add/remove bookmark at current line   mm  :BookmarkToggle
 " Add/edit/remove annotation at current line  mi  :BookmarkAnnotate <TEXT>
 " Jump to next bookmark in buffer   mn  :BookmarkNext
@@ -391,19 +425,11 @@ let g:lightline = { 'colorscheme': 'gotham256' }
 map  <Leader>s <Plug>(easymotion-bd-f)
 nmap <Leader>s <Plug>(easymotion-overwin-f)
 
-" s{char}{char} to move to {char}{char}
-" nmap s <Plug>(easymotion-overwin-f2)
-
 " incsearch
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
+" search with cursor still at the current position
 map g/ <Plug>(incsearch-stay)
-
-" vim-browser-search
-" TODO: unstable
-nmap <silent> <Leader>p <Plug>SearchNormal
-vmap <silent> <Leader>p <Plug>SearchVisual
-let g:browser_search_default_engine = 'duckduckgo'
 
 " .vimrc source automatically
 " snippet, autocompletion is away from me,
@@ -415,10 +441,6 @@ let g:lsc_enable_autocomplete = v:false
 let g:lsc_auto_map = {
       \ 'GoToDefinition': 'gd',
       \ 'GoToDefinitionSplit': ['<C-W>]', '<C-W><C-]>'],
-      \ 'FindReferences': 'gr',
-      \ 'NextReference': '<C-n>',
-      \ 'PreviousReference': '<C-p>',
-      \ 'FindImplementations': 'gI',
       \ 'FindCodeActions': 'ga',
       \ 'Rename': 'gR',
       \ 'ShowHover': v:true,
@@ -426,33 +448,22 @@ let g:lsc_auto_map = {
       \ 'WorkspaceSymbol': 'gS',
       \ 'SignatureHelp': 'gm',
       \}
-" verbose-mode
-let g:autoformat_verbosemode=1
-noremap <leader>m :Autoformat<CR>
-
-
 
 " InstantMarkDown
 let g:instant_markdown_autostart = 0
 
-"markdown - image
-autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
-" there are some defaults for image directory and image name, you can change them
-" let g:mdip_imgdir = 'img'
-" let g:mdip_imgname = 'image'
+" Goyo - distraction free
+nnoremap <leader>z :Goyo<cr>
+let g:goyo_width = 100
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
-" vim- ranger
-let g:ranger_map_keys = 0
-map <leader>rn :Ranger<CR>
 
-" change cursor color
-if &term =~ "xterm\\|rxvt"
-  " use an orange cursor in insert mode
-  let &t_SI = "\<Esc>]12;orange\x7"
-  " use a red cursor otherwise
-  let &t_EI = "\<Esc>]12;red\x7"
-  silent !echo -ne "\033]12;red\007"
-  " reset cursor when vim exits
-  autocmd VimLeave * silent !echo -ne "\033]112\007"
-  " use \003]12;gray\007 for gnome-terminal
-endif
+
+" expand region
+map = <Plug>(expand_region_expand)
+
+" AnyJump
+" <leader>j
+
+

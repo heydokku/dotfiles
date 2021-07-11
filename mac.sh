@@ -3,12 +3,22 @@
 # 1. Basics
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-# TODO:create script that open alacritty, firefox, note at the startup
-# brew install macvim git
-brew install node go httpie
+
+brew install git-extras gh so glab sonic # schema-less search backend. An alternative to Elasticsearch that runs on a few MBs of RAM.
+
+# VIM
+git clone https://github.com/vim/vim.git && cd vim
+./configure --prefix=/opt/local --with-features=huge --enable-pythoninterp --enable-python3interp
+make && sudo make install
+
+brew install --cask macvim
+
+curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
+brew install node go httpie git
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # install GO packages
-# tmux-pomodoro
-go get github.com/justincampbell/tmux-pomodoro
+
 # OR download amd364 https://github.com/justincampbell/tmux-pomodoro/releases/tag/v1.2.1
 
 # rename tmux-pomodoro to pomodoro
@@ -18,6 +28,7 @@ npm install -g firebase-tools macos-key-cast
 # copy .git_ignore
 git clone https://github.com/heydokku/dotfiles
 git config --global core.excludesfile ~/.gitignore_global
+# Copy multiple files to one directory
 cp ~/dotfiles/.gitignore ~
 cp ~/dotfiles/.tmux.conf ~
 cp ~/dotfiles/.bash_profile ~
@@ -32,9 +43,8 @@ cat /etc/shells
 chsh -s /bin/bash
 # file Manager
 brew install tree
-brew install ranger
 # search
-brew install ripgrep
+brew install ripgrep fd       # fd also search file, like fzf, fd will print to the screen
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
@@ -66,10 +76,16 @@ brew install clang-format
 brew tap homebrew/cask-fonts
 # hack nerd font nhin thanh manh
 # fira code nhin no cu bi be ra
+
+# Youtube
 brew install --cask font-hack-nerd-font
+brew install youtube-dl
+git clone https://github.com/pystardust/ytfzf
+cd ytfzf
+sudo make install
 
 # Tmux
-brew install tmux tmuxinator youtube-dl
+brew install tmux tmuxinator tmate  # tmate is a terminal sharing app
 # tmuxinator's config files is located at ~/.config/tmuxinator/
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -77,21 +93,17 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 brew install ctags exuberantk-ctags
 
 # Code styling
-brew install bat
+brew install bat gnu-sed
 
 # TODO: https://github.com/Gcenx/WineskinServer to install mt5
 
 # brew install --cask unity-hub
 # Change the firefox download folder to ~/Developer folder
-brew install alacritty firefox qutebrowser vim amethyst
+brew install alacritty firefox qutebrowser amethyst
 # firefox
 # /Applications/Firefox.app/Contents/MacOS/firefox-bin --version
 
-
-# ranger for vim
 # vim-plug
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   sudo pip3 install --upgrade pip
   # echo 0000 | sudo -S <command>
 
