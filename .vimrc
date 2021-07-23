@@ -5,20 +5,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'pechorin/any-jump.vim' " best find refererences plugin <leader>j <leader>ab to go back
 Plug 'tpope/vim-abolish' " TODO
-
-" o/<CR>     open
-" s          open in split
-" v          open in vsplit
-" t          open in new tab
-" p/<tab>    preview
-" q/x        exit
-" r          references
-" b          back to first result
-" T          group by file
-" a          load next N results
-" A          load all results
-" L          toggle results lists ui style
-
 Plug 'easymotion/vim-easymotion' " <leader>s: search one character
 Plug 'rhysd/clever-f.vim'
 Plug 'haya14busa/incsearch.vim'
@@ -32,7 +18,6 @@ Plug 'jaxbot/github-issues.vim' "TODO: search github issues NICE
 
 " Editor enhancements
 Plug 'Konfekt/FastFold' "updating folds only when called-for.
-Plug 'itchyny/calendar.vim' "TODO
 Plug 'AndrewRadev/switch.vim' "TODO switch to true to false and reverse
 Plug 'jceb/vim-orgmode' "TODO
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } } " TODO search docs
@@ -53,14 +38,12 @@ Plug 'tomtom/tcomment_vim' " <leader>cc to toggle comment
 Plug 'machakann/vim-sandwich' " saw* better than vim-surround
 Plug 'tpope/vim-repeat'
 Plug 'preservim/tagbar'
-Plug 'tpope/vim-projectionist' "TODO
-Plug 'tpope/vim-sleuth' " automatically expandtab
-" Plug 'ludovicchabant/vim-gutentags' " manage your tag files
+Plug 'tpope/vim-sleuth' " automatically expandtab, indent
 Plug 'vimwiki/vimwiki'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Raimondi/delimitMate' " provides insert mode auto-completion for quotes, parens, brackets, etc
 Plug 'andymass/vim-matchup'
-Plug 'mbbill/undotree' " TODO
+Plug 'mbbill/undotree'
 Plug 'luochen1990/rainbow'
 Plug 'mhinz/vim-startify'
 Plug 'mg979/vim-xtabline' " Tabline customization with buffer filtering
@@ -96,9 +79,6 @@ Plug 'mhinz/vim-mix-format'
 Plug 'ervandew/eclim' "bring Eclipse functionality to the Vim editor
 
 " Flutter
-" Plug 'dart-lang/dart-vim-plugin'
-Plug 'natebosch/vim-lsc'
-Plug 'natebosch/vim-lsc-dart'
 Plug 'thosakwe/vim-flutter'
 Plug 'tfnico/vim-gradle'
 
@@ -110,6 +90,7 @@ Plug 'arzg/vim-swift'
 Plug 'tpope/vim-scriptease'
 Plug 'junegunn/vader.vim' " test framework for vim
 Plug 'thinca/vim-themis' " test vim
+
 " UI, theme
 Plug 'morhetz/gruvbox'
 Plug 'andreasvc/vim-256noir'
@@ -122,15 +103,20 @@ Plug 'janko/vim-test'
 " Debug
 " Plug 'puremourning/vimspector'
 
-" no support for go, dart, swift
+" Terminal-related
 Plug 'kassio/neoterm' " open REPL in the same file.
+" can use with vim-fugitive
+Plug 'skywind3000/asyncrun.vim' " run asynchronously, do something while do something for c, python
+Plug 'tpope/vim-dispatch' " 2.4k stars run tests asynchronously for *ruby*, python, c
 
 " Csharp
 Plug 'OmniSharp/omnisharp-vim'
 
 " lsp
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'SirVer/ultisnips' " 6.3k stars
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings' " https://github.com/mattn/vim-lsp-settings#supported-languages :LspInstallServer server_name
+Plug 'rhysd/vim-lsp-ale'
 
 " Linting and Format
 Plug 'dense-analysis/ale'
@@ -144,6 +130,7 @@ Plug 'ap/vim-css-color'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-pandoc/vim-pandoc' "integrate Vim with the pandoc document converter
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'Scuilion/markdown-drawer' "TODO: navigation in large markdown file
 Plug 'godlygeek/tabular'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'} " InstantMarkDown
 
@@ -197,8 +184,8 @@ augroup DeleteWhiteSpace
 augroup END
 
 " colorscheme paramount
-colorscheme gruvbox
-" colorscheme gotham256
+" colorscheme gruvbox
+colorscheme gotham256
 
 " TODO: hoac dung o ngoai bash chen vao trong .vimrc nay cung duoc
 set background=dark
@@ -249,6 +236,7 @@ set nowb
 set nobackup " don't create backup files
 set nocompatible
 set noswapfile
+set noundofile
 set number " show line number
 set hidden
 set mouse=a " if I accidentally use the mouse
@@ -263,6 +251,7 @@ set signcolumn=yes " add a column for sings (e.g. LSP, ...)
 set updatetime=520 " time until update
 set undofile " persists undo tree
 set laststatus=2
+filetype off
 filetype plugin on " enable detection, plugins and indents
 syntax on
 let mapleader = " " " space as leader key
@@ -274,9 +263,7 @@ nnoremap <leader>v :e $MYVIMRC<CR> "view quickly command
 nmap <Leader>rl :source $MYVIMRC
 
 " preservim/nerdtree
-" TODO: open vertically split: gi, cursor stay at the current position
-" i........Open selected file in a split window.......................|NERDTree-i|
-" s........Open selected file in a new vsplit.........................|NERDTree-s|
+" Most used keyboard
 " C........Change the tree root to the selected directory.............|NERDTree-C|
 " U........Same as 'u' except the old root node is left open..........|NERDTree-U|
 " I........Toggle whether hidden files displayed......................|NERDTree-I|
@@ -383,9 +370,9 @@ vmap <C-l> <Plug>MoveBlockLeft
 " airblade/vim-gitgutter
 nmap ]h <Plug>(GitGutterNextHunk)
 nmap [h <Plug>(GitGutterPrevHunk)
-nmap ghs <Plug>(GitGutterStageHunk)
-nmap ghu <Plug>(GitGutterUndoHunk)
-nmap ghp <Plug>(GitGutterPreviewHunk)
+nmap <leader>gs <Plug>(GitGutterStageHunk)
+nmap <leader>gu <Plug>(GitGutterUndoHunk)
+nmap <leader>gp <Plug>(GitGutterPreviewHunk)
 let g:gitgutter_show_msg_on_hunk_jumping = 0
 
 "thosakwe/vim-flutter
@@ -396,30 +383,23 @@ nnoremap <leader>rr :FlutterRun<cr>
 nnoremap <leader>rq :FlutterQuit<cr>
 
 " vim-bookmark
-nmap <leader>aa <Plug>BookmarkShowAll
-nmap <leader>am :BookmarkToggle<cr>
-let g:bookmark_sign = '>'
 let g:bookmark_save_per_working_dir = 1
 let g:bookmark_highlight_lines = 1
-" TODO:  change bookmark mm to <leader>somekey
-" Add/remove bookmark at current line   mm  :BookmarkToggle
-" Add/edit/remove annotation at current line  mi  :BookmarkAnnotate <TEXT>
-" Jump to next bookmark in buffer   mn  :BookmarkNext
-" Jump to previous bookmark in buffer   mp  :BookmarkPrev
-" Clear bookmarks in current buffer only  mc  :BookmarkClear
-" Clear bookmarks in all buffers  mx  :BookmarkClearAll
-" Move up bookmark at current line  [count]mkk  :BookmarkMoveUp [<COUNT>]
-" Move down bookmark at current line  [count]mjj  :BookmarkMoveDown [<COUNT>]
-" Move bookmark at current line to another line   [count]mg   :BookmarkMoveToLine <LINE>
+let g:bookmark_no_default_key_mappings = 1
+let g:bookmark_center = 1
 
+nmap <Leader>ai <Plug>BookmarkAnnotate
+nmap <Leader>aa <Plug>BookmarkToggle
+nmap <leader>as <Plug>BookmarkShowAll
+nmap <Leader>aj <Plug>BookmarkNext
+nmap <Leader>ak <Plug>BookmarkPrev
+nmap <Leader>ac <Plug>BookmarkClear
+nmap <Leader>ax <Plug>BookmarkClearAll
+nmap <Leader>ag <Plug>BookmarkMoveToLine
 
-nmap ge <plug>(qf-diagnostics-popup-quickfix)
-nmap <leader>e <plug>(qf-diagnostics-popup-loclist)
-" lightline
-if !has('gui_running')
-  set t_Co=256
-endif
-let g:lightline = { 'colorscheme': 'gotham256' }
+nmap <leader>re <plug>(qf-diagnostics-popup-quickfix)
+nmap ge <plug>(qf-diagnostics-popup-loclist)
+
 
 " vim-easymotion
 map  <Leader>s <Plug>(easymotion-bd-f)
@@ -435,19 +415,6 @@ map g/ <Plug>(incsearch-stay)
 " snippet, autocompletion is away from me,
 " coc.nvim, neomake, neoformat, or something like that
 "
-" vim-lsc
-let g:lsc_server_commands = {'dart': 'dart_language_server'}
-let g:lsc_enable_autocomplete = v:false
-let g:lsc_auto_map = {
-      \ 'GoToDefinition': 'gd',
-      \ 'GoToDefinitionSplit': ['<C-W>]', '<C-W><C-]>'],
-      \ 'FindCodeActions': 'ga',
-      \ 'Rename': 'gR',
-      \ 'ShowHover': v:true,
-      \ 'DocumentSymbol': 'go',
-      \ 'WorkspaceSymbol': 'gS',
-      \ 'SignatureHelp': 'gm',
-      \}
 
 " InstantMarkDown
 let g:instant_markdown_autostart = 0
@@ -466,4 +433,50 @@ map = <Plug>(expand_region_expand)
 " AnyJump
 " <leader>j
 
+" vim-lsp
+" TODO: disable find definition. no supporting definition preview with dart.
+nnoremap gd :LspPeekDefinition<cr>
+nnoremap gD :LspDefinition<cr>
+nnoremap <leader>q :LspPreviousError<cr>
+nnoremap <leader>e :LspNextError<cr>
+nnoremap gr :LspRename<cr>
+nnoremap <leader>rf :LspDocumentFormat<cr>
+nnoremap K :LspHover<cr>
+nnoremap go :LspDocumentSymbol<cr>
+nnoremap ga :LspCodeAction<cr>
 
+" ALE
+let g:ale_disable_lsp = 1
+" let g:ale_hover_to_preview = 1
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\}
+
+" lightline
+if !has('gui_running')
+  set t_Co=256
+endif
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+
+" neoterm
+" filetype plugin on " is set above
+" set nocompatible
+" filetype off
+nnoremap <F5> :Ttoggle<cr>
+" TODO: map with <t> or <leader>t
+" switch between vim and terminal is ctrl + ww
+let g:neoterm_default_mod = 'botright'
+
+let &runtimepath.=',~/.vim/bundle/neoterm'

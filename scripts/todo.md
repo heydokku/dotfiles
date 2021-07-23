@@ -1,0 +1,1 @@
+- [ ] automatically update dotfiles at the end of  the days

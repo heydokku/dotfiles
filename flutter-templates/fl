@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# move to flutter's template folder
+cp main.dart.tmpl /Users/$USER/flutter/packages/flutter_tools/templates/app/lib

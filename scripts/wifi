@@ -1,0 +1,13 @@
+#!/bin/bash
+
+wifi-off(){
+  sudo networksetup -setnetworkserviceenabled Wi-Fi off
+  sleep 5
+  ping google.com
+}
+
+wifi-on(){
+  sudo networksetup -setnetworkserviceenabled Wi-Fi on
+  sleep 5
+  ping google.com
+}

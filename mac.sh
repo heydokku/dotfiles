@@ -4,7 +4,7 @@
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-brew install git-extras gh so glab sonic # schema-less search backend. An alternative to Elasticsearch that runs on a few MBs of RAM.
+brew install git-extras gh so glab sonic basictex # schema-less search backend. An alternative to Elasticsearch that runs on a few MBs of RAM.
 
 # VIM
 git clone https://github.com/vim/vim.git && cd vim
@@ -36,6 +36,9 @@ echo '0000' | sudo pip install --upgrade google-api-python-client oauth2client p
 
 # .net for C#
 # brew install --cask dotnet-sdk
+
+# SHELL
+brew install shellcheck
 # Change shell from zsh to bash
 # check which scripting languages are supported in the system.
 cat /etc/shells
@@ -62,6 +65,12 @@ sdkmanager --no_https --install 'system-images;android-30;google_apis;x86' 'emul
 sdkmanager --no_https --install 'extras;intel;Hardware_Accelerated_Execution_Manager'
 sdkmanager --no_https --install 'platforms;android-30' 'build-tools;30.0.2'
 sdkmanager --list
+
+# Google Cloud
+brew install google-cloud-sdk
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
+
 # brew cask install adoptopenjdk13
 # create new virtual devices
 #download the android emulator package, not with specific devices
