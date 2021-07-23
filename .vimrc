@@ -1,9 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
 " Search
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'pechorin/any-jump.vim' " best find refererences plugin <leader>j <leader>ab to go back
+Plug 'ctrlpvim/ctrlp.vim' " can be used with vim 7+ for linux
+Plug 'tacahiroy/ctrlp-funky'
 Plug 'tpope/vim-abolish' " TODO
 Plug 'easymotion/vim-easymotion' " <leader>s: search one character
 Plug 'rhysd/clever-f.vim'
@@ -14,7 +13,6 @@ Plug 'alaviss/nim.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb' " GBrowser: to open file on Github
 Plug 'airblade/vim-gitgutter'
-Plug 'jaxbot/github-issues.vim' "TODO: search github issues NICE
 
 " Editor enhancements
 Plug 'Konfekt/FastFold' "updating folds only when called-for.
@@ -184,12 +182,12 @@ augroup DeleteWhiteSpace
 augroup END
 
 " colorscheme paramount
-" colorscheme gruvbox
-colorscheme gotham256
+colorscheme gruvbox
+" colorscheme gotham256
 
 " TODO: hoac dung o ngoai bash chen vao trong .vimrc nay cung duoc
-set background=dark
-" set background=light
+" set background=dark
+set background=light
 
 " Save & quit
 noremap Q :q<CR>
@@ -338,27 +336,12 @@ let g:vimwiki_ext2syntax = {'.md': 'markdown',
       \ '.mdown': 'markdown'}
 let g:taskwiki_markup_syntax = 'markdown'
 
-
-" dart-vim
-let dart_format_on_save = 1
-let dart_style_guide = 2
-
-"fzf.vim
-let g:fzf_action = {
-      \ 'ctrl-t': 'tab split',
-      \ 'ctrl-x': 'split',
-      \ 'ctrl-v': 'vsplit' }
-
-let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'border': 'sharp' } }
-let g:fzf_tags_command = 'ctags -R'
-
-let $FZF_DEFAULT_OPTS = '--inline-info'
-let $FZF_DEFAULT_COMMAND = "rg --files --hidden --glob '!.git/**' --glob '!build/**' --glob '!.dart_tool/**' --glob '!.idea'"
-nnoremap <leader>f :Files<cr>
-nnoremap <leader>g :Rg<cr>
-nnoremap <leader>h :History:<cr>
-nnoremap <leader>cc :TComment<cr>
-nnoremap <leader>T :TagbarToggle<CR>
+" TODO: Replace with CtrP commands
+" nnoremap <leader>f :Files<cr>
+" nnoremap <leader>g :Rg<cr>
+" nnoremap <leader>h :History:<cr>
+" nnoremap <leader>cc :TComment<cr>
+" nnoremap <leader>T :TagbarToggle<CR>
 
 "vim-move
 let g:move_map_keys = 0
@@ -400,7 +383,6 @@ nmap <Leader>ag <Plug>BookmarkMoveToLine
 nmap <leader>re <plug>(qf-diagnostics-popup-quickfix)
 nmap ge <plug>(qf-diagnostics-popup-loclist)
 
-
 " vim-easymotion
 map  <Leader>s <Plug>(easymotion-bd-f)
 nmap <Leader>s <Plug>(easymotion-overwin-f)
@@ -424,8 +406,6 @@ nnoremap <leader>z :Goyo<cr>
 let g:goyo_width = 100
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
-
-
 
 " expand region
 map = <Plug>(expand_region_expand)
